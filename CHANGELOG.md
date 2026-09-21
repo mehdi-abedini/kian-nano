@@ -1,5 +1,10 @@
 # Changelog
 
+## 0.2.0 — 2026-09-21
+- Added claim-level verification and explicit execution modes to the public research skill.
+- Added deterministic package validation and unit tests to CI.
+- Kept confidential formulation, customer, and unpublished IP data outside the public repository.
+
 ## 0.1.0 - Initial architecture
 - Created portable Kian Nano Karno research-orchestrator skill.
 - Added science, engineering, finance, IP, business, and reporting references.

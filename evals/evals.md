@@ -20,7 +20,7 @@
 ## Acceptance criteria
 A valid run should:
 - identify the research objective;
-- distinguish evidence from interpretation;
+- identify evidence and distinguish evidence from interpretation;
 - cite dated sources;
 - expose missing evidence;
 - avoid fabricated results;

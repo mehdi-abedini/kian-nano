@@ -34,6 +34,14 @@ jobs:
               raise SystemExit('SKILL.md: missing ' + ', '.join(missing))
           print('SKILL frontmatter: PASS')
 
+      - name: Run package validator
+        shell: bash
+        run: python scripts/validate_agent_package.py
+
+      - name: Run validator unit tests
+        shell: bash
+        run: python -m unittest tests.test_validate_agent_package
+
       - name: Check whitespace
         shell: bash
         run: git diff --check
