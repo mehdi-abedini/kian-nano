@@ -33,3 +33,28 @@
   kian_suitability: HPC-reproducibility
   confidence: high
   last_verified: 2026-09-21
+- id: rdkit
+  category: cheminformatics-library
+  organization: RDKit
+  url: https://github.com/rdkit/rdkit
+  license: BSD-3-Clause
+  access: public
+  modality: cheminformatics
+  task: molecular-standardization-descriptors-fingerprints-scaffolds
+  reproducibility: high
+  kian_suitability: core-molecular-preprocessing
+  confidence: high
+  last_verified: "2026-09-21"
+
+- id: chemprop
+  category: molecular-ml-library
+  organization: MIT Chemprop
+  url: https://github.com/chemprop/chemprop
+  license: MIT
+  access: public
+  modality: graph-neural-network
+  task: molecular-property-prediction
+  reproducibility: high
+  kian_suitability: optional-model-backend-after-benchmark-contract
+  confidence: high
+  last_verified: "2026-09-21"

@@ -75,3 +75,39 @@
   kian_suitability: public-data-ingestion
   confidence: high
   last_verified: "2026-09-21"
+- id: tdc-admet-group
+  category: therapeutic-benchmark
+  organization: Therapeutics Data Commons
+  url: https://tdcommons.ai/benchmark/admet_group/overview/
+  access: public
+  modality: small-molecule-ADMET
+  task: molecular-property-prediction
+  benchmark_evidence: "22 ADMET datasets; scaffold benchmark and fixed evaluation protocol"
+  privacy: public
+  kian_suitability: primary-admet-benchmark-reference
+  confidence: high
+  last_verified: "2026-09-21"
+
+- id: chembl
+  category: bioactivity-database
+  organization: EMBL-EBI
+  url: https://www.ebi.ac.uk/chembl/
+  access: public
+  modality: small-molecule-bioactivity
+  task: target-assay-compound-resolution
+  privacy: public
+  kian_suitability: molecular-evidence-source
+  confidence: high
+  last_verified: "2026-09-21"
+
+- id: pubchem
+  category: chemical-database
+  organization: NCBI
+  url: https://pubchem.ncbi.nlm.nih.gov/
+  access: public
+  modality: chemical-structure-and-activity
+  task: identity-property-safety-literature-linkage
+  privacy: public
+  kian_suitability: molecular-identity-resolution
+  confidence: high
+  last_verified: "2026-09-21"
