@@ -1,5 +1,5 @@
 id: kian-nano-karno-research-agent
-version: 0.2.0
+version: 0.3.0
 type: research-orchestrator
 owner: Kian Nano Karno
 runtime:
@@ -12,6 +12,11 @@ domains:
   - scientific-research
   - bioinformatics
   - genomics
+  - ngs
+  - single-cell-omics
+  - spatial-omics
+  - long-read-sequencing
+  - genomic-ai
   - drug-discovery
   - drug-delivery
   - nanotechnology
@@ -29,5 +34,6 @@ domains:
 governance:
   secrets_public: false
   confidential_knowledge_public: false
+  human_genomic_data_public: false
   external_side_effects: approval-required
   financial_execution: approval-required
