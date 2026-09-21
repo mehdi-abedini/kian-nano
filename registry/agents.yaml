@@ -27,3 +27,67 @@
   kian_suitability: primary-agent-evaluation-reference
   confidence: high
   last_verified: "2026-09-21"
+- id: [redacted-agent]
+  category: specialist-agent
+  organization: Kian Nano Karno
+  region: internal-public-sanitized
+  access: architecture-reference
+  modality: small-molecule-drug-design
+  task: target-evidence-screening-property-prediction-design-control
+  privacy: deployable-locally
+  failure_modes: "data leakage, scaffold memorization, docking overinterpretation, synthetic infeasibility"
+  kian_suitability: core-drug-design-specialist
+  confidence: high
+  last_verified: "2026-09-21"
+
+- id: [redacted-agent]
+  category: specialist-agent
+  organization: Kian Nano Karno
+  region: internal-public-sanitized
+  access: architecture-reference
+  modality: nanoformulation
+  task: carrier-formulation-process-cqa-reasoning
+  privacy: deployable-locally
+  failure_modes: "size-only optimization, batch drift, assay artifacts, scale-up failure"
+  kian_suitability: core-drug-delivery-specialist
+  confidence: high
+  last_verified: "2026-09-21"
+
+- id: [redacted-agent]
+  category: specialist-agent
+  organization: Kian Nano Karno
+  region: internal-public-sanitized
+  access: architecture-reference
+  modality: nanomedicine
+  task: nano-bio-interaction-control-and-translation
+  privacy: deployable-locally
+  failure_modes: "corona effects, context dependence, control failure, uptake-efficacy conflation"
+  kian_suitability: core-translational-validation-specialist
+  confidence: high
+  last_verified: "2026-09-21"
+
+- id: [redacted-agent]
+  category: specialist-agent
+  organization: Kian Nano Karno
+  region: internal-public-sanitized
+  access: architecture-reference
+  modality: ADMET
+  task: benchmark-splitting-uncertainty-applicability-domain
+  privacy: deployable-locally
+  failure_modes: "leakage, assay heterogeneity, domain shift, overinterpretation"
+  kian_suitability: core-molecular-intelligence-specialist
+  confidence: high
+  last_verified: "2026-09-21"
+
+- id: [redacted-agent]
+  category: specialist-agent
+  organization: Kian Nano Karno
+  region: internal-public-sanitized
+  access: architecture-reference
+  modality: active-learning
+  task: experiment-selection-budgeted-learning-provenance
+  privacy: deployable-locally
+  failure_modes: "selection bias, budget mismatch, stopping-rule drift, observation/provenance mismatch"
+  kian_suitability: core-experimental-loop-specialist
+  confidence: high
+  last_verified: "2026-09-21"
