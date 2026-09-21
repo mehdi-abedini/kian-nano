@@ -63,3 +63,16 @@ def claim_supported_by_evidence(evidence_class, claim_class):
     if evidence_class not in _EVIDENCE_LEVEL or claim_class not in _EVIDENCE_LEVEL:
         raise ValueError("unknown evidence or claim class")
     return _EVIDENCE_LEVEL[evidence_class] >= _EVIDENCE_LEVEL[claim_class]
+
+
+_REQUIRED_EVIDENCE_CONTRACT_FIELDS = ("evidence_class", "claim_class", "source_version", "provenance_id")
+
+
+def validate_evidence_contract(contract):
+    """Validate a typed evidence-to-claim contract before orchestration proceeds."""
+    missing = [key for key in _REQUIRED_EVIDENCE_CONTRACT_FIELDS if not contract.get(key)]
+    if missing:
+        raise ValueError("missing evidence contract fields: " + ", ".join(missing))
+    if not claim_supported_by_evidence(contract["evidence_class"], contract["claim_class"]):
+        raise ValueError("evidence class cannot support requested claim class")
+    return True
