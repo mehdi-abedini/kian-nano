@@ -1,0 +1,77 @@
+﻿- id: ensembl
+  category: annotation-api
+  organization: EMBL-EBI
+  region: Europe
+  url: https://www.ensembl.org/
+  access: public-api
+  modality: genomics
+  task: gene-transcript-variant-lookup
+  privacy: public
+  kian_suitability: reference-resolution
+  confidence: high
+  last_verified: "2026-09-21"
+
+- id: clinvar
+  category: clinical-variant-resource
+  organization: NCBI
+  region: USA
+  url: https://www.ncbi.nlm.nih.gov/clinvar/
+  access: public
+  modality: variant-interpretation
+  task: clinical-significance-evidence
+  privacy: public
+  kian_suitability: clinical-annotation
+  confidence: high
+  last_verified: "2026-09-21"
+
+- id: gwas-catalog
+  category: association-resource
+  organization: EMBL-EBI
+  region: Europe
+  url: https://www.ebi.ac.uk/gwas/
+  access: public
+  modality: GWAS
+  task: trait-association-discovery
+  privacy: public
+  kian_suitability: association-context
+  confidence: high
+  last_verified: "2026-09-21"
+
+- id: cellxgene
+  category: single-cell-dataset-catalog
+  organization: Chan Zuckerberg Initiative
+  region: USA
+  url: https://cellxgene.cziscience.com/
+  access: public
+  modality: single-cell
+  task: dataset-discovery-and-analysis
+  privacy: mixed
+  kian_suitability: public-benchmark-discovery
+  confidence: high
+  last_verified: "2026-09-21"
+
+- id: gtex
+  category: expression-resource
+  organization: GTEx Consortium
+  region: USA
+  url: https://gtexportal.org/
+  access: public
+  modality: bulk-RNA
+  task: tissue-expression-and-eqtl
+  privacy: controlled-components-may-exist
+  kian_suitability: expression-context
+  confidence: high
+  last_verified: "2026-09-21"
+
+- id: geo
+  category: functional-genomics-archive
+  organization: NCBI
+  region: USA
+  url: https://www.ncbi.nlm.nih.gov/geo/
+  access: public
+  modality: bulk-and-single-cell
+  task: dataset-discovery
+  privacy: mixed
+  kian_suitability: public-data-ingestion
+  confidence: high
+  last_verified: "2026-09-21"

@@ -1,0 +1,133 @@
+﻿- id: giab-hg002-v5q
+  category: reference-benchmark
+  organization: NIST Genome in a Bottle
+  region: USA
+  url: https://www.nist.gov/programs-projects/genome-bottle
+  version: "HG002 v5.0q"
+  release_date: "2025-11"
+  license: public
+  access: public
+  modality: short-read-long-read
+  task: germline-small-variant-and-sv-benchmarking
+  reference_build: T2T-HG002-assembly-v1.1
+  benchmark_evidence: NIST GIAB benchmark product
+  maintenance: active
+  reproducibility: high
+  compute: moderate
+  privacy: public
+  failure_modes: "benchmark scope and confidence regions must match assay and caller"
+  kian_suitability: primary-benchmark
+  confidence: high
+  last_verified: "2026-09-21"
+
+- id: cancer-giab-hg008
+  category: reference-benchmark
+  organization: NIST Cancer GIAB
+  region: USA
+  url: https://www.nist.gov/programs-projects/genome-bottle
+  version: "2026 draft products"
+  release_date: "2026-08"
+  license: public
+  access: public
+  modality: tumor-normal-multi-platform
+  task: somatic-sv-cnv-small-variant-benchmarking
+  reference_build: HG008-associated-assemblies
+  benchmark_evidence: "draft somatic SV/CNV and clonal/truncal small-variant benchmarks"
+  maintenance: active
+  reproducibility: high
+  compute: high
+  privacy: public
+  failure_modes: "draft benchmark status; do not treat draft regions as final truth"
+  kian_suitability: emerging-somatic-benchmark
+  confidence: high
+  last_verified: "2026-09-21"
+
+- id: hprc-release-2
+  category: reference-resource
+  organization: Human Pangenome Reference Consortium
+  region: international
+  url: https://humanpangenome.org/
+  version: "Release 2"
+  release_date: "2025-05-12"
+  license: mixed-by-component
+  access: public
+  modality: phased-human-genomes
+  task: pangenome-and-reference-analysis
+  reference_build: HPRC
+  benchmark_evidence: "expanded sequencing and high-quality phased genomes from >200 individuals"
+  maintenance: active
+  reproducibility: high
+  compute: high
+  privacy: controlled-components-may-exist
+  failure_modes: "reference choice can change mapping and variant representation"
+  kian_suitability: reference-governance
+  confidence: high
+  last_verified: "2026-09-21"
+
+- id: gencode-v49
+  category: annotation
+  organization: GENCODE
+  region: international
+  url: https://www.gencodegenes.org/
+  version: "V49"
+  release_date: "2025"
+  license: GENCODE-terms
+  access: public
+  modality: human-mouse
+  task: gene-transcript-annotation
+  reference_build: "human GRCh38/GRCh37; mouse GRCm38"
+  annotation_dependency: "Ensembl release 115"
+  benchmark_evidence: annotation-release metadata
+  maintenance: active
+  reproducibility: high
+  compute: low
+  privacy: public
+  failure_modes: "gene/transcript identifiers and coordinates vary across releases"
+  kian_suitability: annotation-lock-candidate
+  confidence: high
+  last_verified: "2026-09-21"
+
+- id: gnomad-v4-1
+  category: population-variant-resource
+  organization: Broad Institute
+  region: USA
+  url: https://gnomad.broadinstitute.org/
+  version: "v4.1"
+  release_date: "2025-04"
+  license: project-specific
+  access: public
+  modality: population-genomics
+  task: allele-frequency-and-constraint-context
+  reference_build: GRCh38
+  benchmark_evidence: release/changelog
+  maintenance: active
+  reproducibility: high
+  compute: moderate
+  privacy: public-summary-level
+  failure_modes: "population composition and filtering affect interpretation"
+  kian_suitability: variant-interpretation
+  confidence: high
+  last_verified: "2026-09-21"
+
+- id: dbnsfp-v5-3
+  category: variant-annotation
+  organization: dbNSFP
+  region: international
+  url: https://sites.google.com/site/jpopgen/dbNSFP
+  version: "5.3"
+  release_date: "2025-10-06"
+  license: project-specific
+  access: public
+  modality: variant-annotation
+  task: functional-prediction-aggregation
+  reference_build: "GRCh38 plus hs1/T2T-CHM13 v2.0 coordinates"
+  annotation_dependency: "GENCODE 49 / Ensembl 115"
+  benchmark_evidence: release metadata
+  maintenance: active
+  reproducibility: high
+  compute: moderate
+  privacy: public
+  failure_modes: "aggregated predictors are evidence inputs, not independent confirmations"
+  kian_suitability: annotation-layer
+  confidence: high
+  last_verified: "2026-09-21"

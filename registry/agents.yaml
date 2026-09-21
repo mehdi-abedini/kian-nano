@@ -1,0 +1,29 @@
+﻿- id: genentech-spatialagent
+  category: agent
+  organization: Genentech Research
+  region: USA
+  url: https://github.com/
+  access: public-reference
+  modality: spatial-omics
+  task: agentic-spatial-analysis
+  benchmark_evidence: "external reference architecture; requires independent audit before adoption"
+  privacy: untrusted-until-audited
+  failure_modes: "tool permissions, prompt injection, reproducibility, model dependence"
+  kian_suitability: architecture-reference-only
+  confidence: medium
+  last_verified: "2026-09-21"
+
+- id: bioagent-benchmark-single-cell-2026
+  category: agent-benchmark
+  organization: Genome Biology benchmark authors
+  region: international
+  url: https://github.com/lyyang01/bioagent-benchmark
+  access: public
+  modality: single-cell-omics
+  task: execution-grounded-agent-benchmarking
+  benchmark_evidence: "50 real-world tasks; quantitative multi-axis evaluation"
+  privacy: public-benchmark-data
+  failure_modes: "benchmark coverage does not establish universal agent superiority"
+  kian_suitability: primary-agent-evaluation-reference
+  confidence: high
+  last_verified: "2026-09-21"

@@ -1,0 +1,35 @@
+- id: nextflow
+  category: workflow-engine
+  organization: Seqera
+  url: https://www.nextflow.io/
+  access: public
+  modality: general
+  task: reproducible-workflow-execution
+  privacy: deployable-locally
+  kian_suitability: core-orchestration
+  confidence: high
+  last_verified: 2026-09-21
+
+- id: docker
+  category: container-runtime
+  organization: Docker
+  url: https://www.docker.com/
+  access: public
+  modality: general
+  task: environment-reproducibility
+  privacy: deployable-locally
+  kian_suitability: reproducibility-layer
+  confidence: high
+  last_verified: 2026-09-21
+
+- id: apptainer
+  category: container-runtime
+  organization: Apptainer
+  url: https://apptainer.org/
+  access: public
+  modality: HPC
+  task: portable-container-execution
+  privacy: deployable-locally
+  kian_suitability: HPC-reproducibility
+  confidence: high
+  last_verified: 2026-09-21

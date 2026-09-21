@@ -1,0 +1,43 @@
+﻿- id: scgpt
+  category: foundation-model
+  modality: single-cell
+  task: representation-annotation-generation
+  access: public-research
+  benchmark_evidence: "evaluated in 2026 comparative single-cell foundation-model study"
+  failure_modes: "task-, preprocessing- and domain-dependent performance"
+  kian_suitability: candidate-not-default
+  confidence: medium-high
+  last_verified: "2026-09-21"
+
+- id: geneformer
+  category: foundation-model
+  modality: single-cell
+  task: gene-expression-representation
+  access: public-research
+  benchmark_evidence: "evaluated in 2026 comparative single-cell foundation-model study"
+  failure_modes: "task-, preprocessing- and domain-dependent performance"
+  kian_suitability: candidate-not-default
+  confidence: medium-high
+  last_verified: "2026-09-21"
+
+- id: nicheformer
+  category: foundation-model
+  modality: spatial-transcriptomics
+  task: spatial-representation
+  access: public-research
+  benchmark_evidence: "included in 2026 harmonised scRNA/spatial/Perturb-seq benchmark"
+  failure_modes: "modality, tokenization and domain-shift dependence"
+  kian_suitability: candidate-not-default
+  confidence: medium
+  last_verified: "2026-09-21"
+
+- id: evo2
+  category: sequence-foundation-model
+  modality: DNA
+  task: sequence-modeling-and-generation
+  access: public-research
+  benchmark_evidence: "requires task-specific evaluation before scientific use"
+  failure_modes: "distribution shift, leakage/homology, calibration"
+  kian_suitability: candidate-for-sequence-track
+  confidence: medium
+  last_verified: "2026-09-21"

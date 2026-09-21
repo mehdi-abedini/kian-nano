@@ -1,0 +1,77 @@
+﻿- id: nfcore-sarek
+  category: workflow
+  organization: nf-core
+  region: Europe
+  url: https://github.com/nf-core/sarek
+  version: "3.9.0"
+  license: MIT
+  access: public
+  modality: WGS-WES-targeted
+  task: germline-and-somatic-variant-analysis
+  benchmark_evidence: "automated CI; published workflow validation"
+  maintenance: active
+  reproducibility: high
+  compute: moderate-high
+  privacy: deployable-locally
+  failure_modes: "reference/cache/version mismatches; caller-specific assumptions"
+  kian_suitability: primary-production-workflow
+  confidence: high
+  last_verified: "2026-09-21"
+
+- id: nfcore-variantbenchmarking
+  category: workflow
+  organization: nf-core
+  region: Europe
+  url: https://github.com/nf-core/variantbenchmarking
+  license: MIT
+  access: public
+  modality: variant-calling
+  task: SNV-INDEL-SV-CNV-benchmarking
+  benchmark_evidence: "GIAB and SEQC2 truth-set workflows"
+  maintenance: active
+  reproducibility: high
+  compute: moderate
+  privacy: deployable-locally
+  failure_modes: "truth-set scope and high-confidence regions must match assay"
+  kian_suitability: primary-benchmark-workflow
+  confidence: high
+  last_verified: "2026-09-21"
+
+- id: scanpy
+  category: analysis-library
+  organization: scverse
+  region: international
+  url: https://github.com/scverse/scanpy
+  license: BSD-3-Clause
+  access: public
+  modality: single-cell
+  task: preprocessing-clustering-visualization-differential-analysis
+  benchmark_evidence: "active benchmark and test ecosystem"
+  maintenance: active
+  reproducibility: high
+  compute: moderate-high
+  privacy: deployable-locally
+  failure_modes: "preprocessing choices and batch effects materially alter results"
+  kian_suitability: core-single-cell-tool
+  confidence: high
+  last_verified: "2026-09-21"
+
+- id: scvi-tools
+  category: analysis-library
+  organization: scverse
+  region: international
+  url: https://github.com/scverse/scvi-tools
+  version: "1.5.0.post1"
+  license: BSD-3-Clause
+  access: public
+  modality: single-cell-spatial-multi-omics
+  task: probabilistic-modeling-integration-annotation-deconvolution
+  benchmark_evidence: "active tests and published model evaluations"
+  maintenance: active
+  reproducibility: high
+  compute: moderate-high
+  privacy: deployable-locally
+  failure_modes: "model choice, preprocessing and domain shift"
+  kian_suitability: advanced-single-cell-modeling
+  confidence: high
+  last_verified: "2026-09-21"

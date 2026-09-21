@@ -1,0 +1,9 @@
+{
+  "id": "genomics_public_smoke_v1",
+  "privacy": "public-data-only",
+  "task": "registry-and-grader-contract",
+  "expected": {
+    "status": "PASS",
+    "required_fields": ["id", "category", "confidence", "last_verified"]
+  }
+}
