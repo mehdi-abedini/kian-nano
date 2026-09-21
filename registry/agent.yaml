@@ -1,0 +1,33 @@
+id: kian-nano-karno-research-agent
+version: 0.1.0
+type: research-orchestrator
+owner: Kian Nano Karno
+runtime:
+  compatible:
+    - codex
+    - agent-skills-compatible-runtimes
+model_gateway:
+  preferred: omniroute
+domains:
+  - scientific-research
+  - bioinformatics
+  - genomics
+  - drug-discovery
+  - drug-delivery
+  - nanotechnology
+  - materials-science
+  - petroleum-energy
+  - process-engineering
+  - industrial-rd
+  - instrumentation
+  - intellectual-property
+  - technology-intelligence
+  - business-intelligence
+  - finance
+  - quantitative-research
+  - trading-research
+governance:
+  secrets_public: false
+  confidential_knowledge_public: false
+  external_side_effects: approval-required
+  financial_execution: approval-required
