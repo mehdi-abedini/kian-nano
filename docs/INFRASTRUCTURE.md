@@ -76,3 +76,13 @@ Never commit provider keys, OmniRoute credentials, private research data, unpubl
 ## Exit criterion for production readiness
 
 A production candidate should pass: gateway health; authenticated model call; three representative research tasks; citation/provenance checks; uncertainty and hallucination checks; failure/retry tests; private-data isolation tests; approval-gate tests; backup/restore test; and a reproducible release from a clean checkout.
+
+## Runtime findings added during the 2026-09-21 audit
+
+- OmniRoute was found with duplicate server/supervisor processes after repeated restart attempts. The duplicate processes caused port collisions on 20131/20132 and were cleaned up.
+- A clean server instance was restored on `127.0.0.1:20128`; the dashboard root returns HTTP 307 and `/v1/models` returns HTTP 401, confirming that the HTTP gateway is alive but authenticated API access is still required.
+- OmniRoute logs show a recurring cleanup error for a missing `compression_run_telemetry` table. This is a product/database migration issue and should be fixed or suppressed by the gateway vendor before production use.
+- Redis is not configured; OmniRoute falls back to in-memory rate limiting. This is acceptable for a single-machine test but not sufficient for durable multi-process admission/rate-limit state.
+- The current direct server recovery is not yet a durable Windows service/autostart deployment. Process supervision and reboot recovery remain open.
+
+These findings are intentionally separated from the Kian agent package: they are gateway/runtime infrastructure issues, not research-skill logic defects.
