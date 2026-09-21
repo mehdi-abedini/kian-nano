@@ -47,3 +47,19 @@ def coverage_report(accepted_flags):
         raise ValueError("accepted_flags must not be empty")
     accepted = sum(flags)
     return {"total": len(flags), "accepted": accepted, "rejected": len(flags) - accepted}
+
+
+_EVIDENCE_LEVEL = {
+    "SYNTHETIC": 0,
+    "PUBLIC_SYNCHRONIZED_DATA": 1,
+    "PHYSICAL_BENCH": 2,
+    "CONTROLLED_HUMAN": 3,
+    "INTENDED_USE_CLINICAL": 4,
+}
+
+
+def claim_supported_by_evidence(evidence_class, claim_class):
+    """Return whether evidence is mature enough for the requested claim class."""
+    if evidence_class not in _EVIDENCE_LEVEL or claim_class not in _EVIDENCE_LEVEL:
+        raise ValueError("unknown evidence or claim class")
+    return _EVIDENCE_LEVEL[evidence_class] >= _EVIDENCE_LEVEL[claim_class]
