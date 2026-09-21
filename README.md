@@ -5,7 +5,7 @@ A portable Agent Skill for evidence-grounded scientific research, industrial R&D
 ## What it does
 The agent acts as an orchestration layer. It decomposes complex questions, assigns research workstreams, gathers dated evidence, checks conflicts, and produces reproducible reports.
 
-It is designed for Codex and other Agent-Skills-compatible runtimes. The portable skill format uses a SKILL.md entry point and progressive disclosure through reference files. citeturn0search0
+It is designed for Codex and other Agent-Skills-compatible runtimes. The portable skill format uses a SKILL.md entry point and progressive disclosure through reference files.
 
 ## Domains
 - Nanotechnology and materials
