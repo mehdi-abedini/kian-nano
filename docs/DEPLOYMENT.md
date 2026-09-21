@@ -7,7 +7,7 @@
 - Public repository: https://github.com/mehdi-abedini/kian-nano
 - Public website page: https://nanokarno.ir/kian-nano-karno-ai-research-agent/
 - Repository branch: main
-- Repository commit: 7720d2f
+- Repository commit: 8562db7
 
 ## Validation
 
