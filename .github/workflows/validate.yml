@@ -1,0 +1,65 @@
+name: Validate public agent package
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Validate SKILL frontmatter
+        shell: python
+        run: |
+          from pathlib import Path
+          p = Path('SKILL.md')
+          text = p.read_text(encoding='utf-8')
+          if not text.startswith('---\n'):
+              raise SystemExit('SKILL.md: missing YAML frontmatter')
+          end = text.find('\n---\n', 4)
+          if end < 0:
+              raise SystemExit('SKILL.md: malformed YAML frontmatter')
+          front = text[4:end]
+          required = ('name:', 'description:')
+          missing = [x for x in required if x not in front]
+          if missing:
+              raise SystemExit('SKILL.md: missing ' + ', '.join(missing))
+          print('SKILL frontmatter: PASS')
+
+      - name: Check whitespace
+        shell: bash
+        run: git diff --check
+
+      - name: Public secret-pattern scan
+        shell: python
+        run: |
+          from pathlib import Path
+          import re
+          patterns = [
+              r'sk-[A-Za-z0-9_-]{20,}',
+              r'gh[pousr]_[A-Za-z0-9]{20,}',
+              r'-----BEGIN (RSA|OPENSSH|EC|PRIVATE) KEY-----',
+              r'AKIA[0-9A-Z]{16}',
+          ]
+          rx = re.compile('|'.join(patterns))
+          bad = []
+          for p in Path('.').rglob('*'):
+              if not p.is_file() or '.git' in p.parts:
+                  continue
+              try:
+                  s = p.read_text(encoding='utf-8')
+              except (UnicodeDecodeError, OSError):
+                  continue
+              if rx.search(s):
+                  bad.append(str(p))
+          if bad:
+              raise SystemExit('Potential secret pattern in: ' + ', '.join(bad))
+          print('Secret-pattern scan: PASS')
