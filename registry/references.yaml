@@ -64,19 +64,19 @@
   confidence: high
   last_verified: "2026-09-21"
 
-- id: gencode-v49
+- id: gencode-v50
   category: annotation
   organization: GENCODE
   region: international
   url: https://www.gencodegenes.org/
-  version: "V49"
-  release_date: "2025"
+  version: "V50"
+  release_date: "2026-06"
   license: GENCODE-terms
   access: public
   modality: human-mouse
   task: gene-transcript-annotation
   reference_build: "human GRCh38/GRCh37; mouse GRCm38"
-  annotation_dependency: "Ensembl release 115"
+  annotation_dependency: "Ensembl release 116"
   benchmark_evidence: annotation-release metadata
   maintenance: active
   reproducibility: high
@@ -87,13 +87,13 @@
   confidence: high
   last_verified: "2026-09-21"
 
-- id: gnomad-v4-1
+- id: gnomad-v4-1-1
   category: population-variant-resource
   organization: Broad Institute
   region: USA
   url: https://gnomad.broadinstitute.org/
-  version: "v4.1"
-  release_date: "2025-04"
+  version: "v4.1.1"
+  release_date: "2026-03-30"
   license: project-specific
   access: public
   modality: population-genomics
@@ -129,5 +129,83 @@
   privacy: public
   failure_modes: "aggregated predictors are evidence inputs, not independent confirmations"
   kian_suitability: annotation-layer
+  confidence: high
+  last_verified: "2026-09-21"
+
+- id: ga4gh-wes-v1-1
+  category: interoperability-standard
+  organization: GA4GH
+  region: international
+  url: https://www.ga4gh.org/product/workflow-execution-service-wes/
+  version: "1.1"
+  release_date: "2023-09-14"
+  license: open-standard
+  access: public
+  modality: cross-modality
+  task: portable-workflow-execution
+  benchmark_evidence: "current GA4GH standard; interoperability layer"
+  maintenance: current
+  reproducibility: high
+  compute: platform-dependent
+  privacy: governance-dependent
+  failure_modes: "backend implementation differences and workflow/container drift"
+  kian_suitability: architecture-interoperability-layer
+  confidence: high
+  last_verified: "2026-09-21"
+
+- id: ga4gh-trs
+  category: interoperability-standard
+  organization: GA4GH
+  region: international
+  url: https://www.ga4gh.org/product/tool-registry-service-trs/
+  access: public
+  modality: cross-modality
+  task: tool-and-workflow-discovery
+  benchmark_evidence: "current GA4GH standard"
+  maintenance: current
+  reproducibility: high
+  compute: low
+  privacy: public
+  failure_modes: "registry metadata quality and compatibility are not guaranteed"
+  kian_suitability: tool-discovery-layer
+  confidence: high
+  last_verified: "2026-09-21"
+
+- id: gdc-release-46
+  category: cancer-genomics-resource
+  organization: NCI Genomic Data Commons
+  region: USA
+  url: https://portal.gdc.cancer.gov/
+  version: "Data Release 46.0"
+  release_date: "2026-08-10"
+  license: mixed-by-dataset
+  access: public-and-controlled
+  modality: cancer-genomics
+  task: cohort-and-harmonized-genomic-analysis
+  benchmark_evidence: "official GDC release metadata"
+  maintenance: active
+  reproducibility: high
+  compute: high
+  privacy: controlled-components
+  failure_modes: "release-specific processing and provisional derived data"
+  kian_suitability: cancer-genomics-data-source
+  confidence: high
+  last_verified: "2026-09-21"
+
+- id: cellxgene-discover
+  category: single-cell-data-catalog
+  organization: Chan Zuckerberg Initiative
+  region: USA
+  url: https://cellxgene.cziscience.com/
+  access: public-and-mixed
+  modality: single-cell
+  task: atlas-discovery-and-analysis
+  benchmark_evidence: "official current corpus and Census interfaces"
+  maintenance: active
+  reproducibility: high
+  compute: moderate-high
+  privacy: mixed
+  failure_modes: "dataset-specific metadata and preprocessing differences"
+  kian_suitability: public-single-cell-discovery
   confidence: high
   last_verified: "2026-09-21"

@@ -91,3 +91,144 @@
   kian_suitability: core-experimental-loop-specialist
   confidence: high
   last_verified: "2026-09-21"
+
+- id: ai4nucleome-biomaster
+  category: external-agent
+  organization: AI4Nucleome / HKUST-GZ
+  region: China
+  url: https://github.com/ai4nucleome/BioMaster
+  repository: https://github.com/ai4nucleome/BioMaster
+  access: public-research
+  modality: multi-omics
+  task: multi-step-bioinformatics-workflow-automation
+  benchmark_evidence: "reported evaluation across RNA-seq, ChIP-seq, single-cell and Hi-C; independent reproduction required"
+  maintenance: active-research
+  reproducibility: audit-required
+  compute: model/workflow-dependent
+  privacy: untrusted-until-audited
+  failure_modes: "error propagation, tool-version drift, model dependence, long-workflow recovery"
+  kian_suitability: architecture-reference
+  confidence: medium-high
+  last_verified: "2026-09-21"
+
+- id: bioinformatics-mcp
+  category: external-agent-tooling
+  organization: community
+  region: international
+  url: https://github.com/raonyguimaraes/bioinformatics-mcp
+  repository: https://github.com/raonyguimaraes/bioinformatics-mcp
+  access: public
+  modality: genomics-transcriptomics-epigenetics
+  task: MCP-mediated-bioinformatics-execution
+  benchmark_evidence: "interactive PBMC and multi-tool examples; independent validation required"
+  maintenance: active-observed
+  reproducibility: audit-required
+  compute: local-tool-dependent
+  privacy: local-deployable-but-untrusted
+  failure_modes: "tool permissions, dependency drift, agent planning errors"
+  kian_suitability: integration-reference
+  confidence: medium
+  last_verified: "2026-09-21"
+
+- id: agentic-genomics
+  category: external-agent-tooling
+  organization: community
+  region: international
+  url: https://github.com/matbanik/agentic-genomics
+  repository: https://github.com/matbanik/agentic-genomics
+  access: public
+  modality: WGS-VCF
+  task: natural-language-genomic-query-and-trio-analysis
+  benchmark_evidence: "repository-level workflow examples; no Kian validation"
+  maintenance: active-observed
+  reproducibility: audit-required
+  compute: local-tool-dependent
+  privacy: sensitive-data-risk
+  failure_modes: "handling of private VCFs, prompt/tool injection, annotation-version drift"
+  kian_suitability: security-and-architecture-reference
+  confidence: medium
+  last_verified: "2026-09-21"
+
+- id: bioinformatics-agent-skills
+  category: agent-knowledge-graph
+  organization: Pipette.bio / Variome Analytics
+  region: international
+  url: https://github.com/variomeanalytics/bioinformatics-agent-skills
+  repository: https://github.com/variomeanalytics/bioinformatics-agent-skills
+  access: public-reference
+  modality: multi-modality
+  task: workflow-discovery
+  benchmark_evidence: "knowledge graph of 78 bioinformatics workflows"
+  maintenance: active-observed
+  reproducibility: audit-required
+  compute: low-to-moderate
+  privacy: public-reference
+  failure_modes: "workflow metadata drift; hosted-service dependency"
+  kian_suitability: workflow-discovery-reference
+  confidence: medium
+  last_verified: "2026-09-21"
+
+- id: [redacted-agent]
+  category: specialist-agent
+  organization: Kian Nano Karno
+  region: internal-public-sanitized
+  access: architecture-reference
+  modality: NGS
+  task: workflow-selection-qc-reproducibility
+  privacy: deployable-locally
+  failure_modes: "reference drift, version drift, QC bypass, metadata mismatch"
+  kian_suitability: core-ngs-specialist
+  confidence: high
+  last_verified: "2026-09-21"
+
+- id: [redacted-agent]
+  category: specialist-agent
+  organization: Kian Nano Karno
+  region: internal-public-sanitized
+  access: architecture-reference
+  modality: germline-somatic-variants
+  task: variant-calling-annotation-evidence-interpretation
+  privacy: deployable-locally
+  failure_modes: "caller-specific artifacts, annotation drift, population bias, evidence conflation"
+  kian_suitability: core-variant-specialist
+  confidence: high
+  last_verified: "2026-09-21"
+
+- id: [redacted-agent]
+  category: specialist-agent
+  organization: Kian Nano Karno
+  region: internal-public-sanitized
+  access: architecture-reference
+  modality: bulk-rna-singlecell-spatial
+  task: expression-analysis-cell-state-spatial-inference
+  privacy: deployable-locally
+  failure_modes: "batch effects, ambient RNA, doublets, annotation uncertainty, domain shift"
+  kian_suitability: core-transcriptomics-specialist
+  confidence: high
+  last_verified: "2026-09-21"
+
+- id: [redacted-agent]
+  category: specialist-agent
+  organization: Kian Nano Karno
+  region: internal-public-sanitized
+  access: architecture-reference
+  modality: multi-omics
+  task: provenance-containerization-workflow-execution
+  privacy: deployable-locally
+  failure_modes: "non-determinism, container drift, incomplete provenance, compute-environment mismatch"
+  kian_suitability: core-reproducibility-specialist
+  confidence: high
+  last_verified: "2026-09-21"
+
+- id: [redacted-agent]
+  category: specialist-agent
+  organization: Kian Nano Karno
+  region: internal-public-sanitized
+  access: architecture-reference
+  modality: genomic-foundation-models-agentic-ai
+  task: benchmark-leakage-uncertainty-ood-evaluation
+  privacy: deployable-locally
+  failure_modes: "homology leakage, benchmark contamination, hallucinated code, task mismatch"
+  kian_suitability: core-genomic-ai-evaluation-specialist
+  confidence: high
+  last_verified: "2026-09-21"
