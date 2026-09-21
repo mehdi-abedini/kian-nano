@@ -38,7 +38,7 @@ Then start a new Codex session if the skill list does not refresh automatically.
 - "Produce a research report with sources, uncertainty, and reproducibility notes."
 
 ## Safety
-Third-party skills and repositories are executable capability bundles and must be reviewed before installation. Do not place secrets, private company files, unpublished formulations, or confidential contracts in this repository. citeturn0search0
+Third-party skills and repositories are executable capability bundles and must be reviewed before installation. Do not place secrets, private company files, unpublished formulations, or confidential contracts in this repository.
 
 ## Status
 Initial public architecture: v0.1.0. The skill is a workflow foundation, not a guarantee of research correctness or financial performance.
