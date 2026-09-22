@@ -34,8 +34,9 @@ def validate_repository(root: Path) -> list[str]:
         for phrase in REQUIRED_EVAL_PHRASES:
             if phrase not in et:
                 errors.append(f"evals/evals.md: missing acceptance phrase: {phrase}")
+    ignored_dirs = {".git", ".venv", "__pycache__", ".pytest_cache", "node_modules"}
     for path in root.rglob("*"):
-        if not path.is_file() or ".git" in path.parts:
+        if not path.is_file() or any(part in ignored_dirs for part in path.parts):
             continue
         try:
             content = path.read_text(encoding="utf-8")

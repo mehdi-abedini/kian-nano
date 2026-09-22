@@ -1,0 +1,15 @@
+{
+  "default_mode": "auto",
+  "budgets": {
+    "cheap": {"max_usd": 0.02, "purpose": ["classification","extraction","triage"]},
+    "standard": {"max_usd": 0.15, "purpose": ["routine_research","drafting","support"]},
+    "deep": {"max_usd": 1.50, "purpose": ["complex_reasoning","evidence_synthesis","adjudication"]}
+  },
+  "providers": [
+    {"id":"kie","enabled":false,"capabilities":["image","video","audio","chat"],"priority":"cost-sensitive"},
+    {"id":"experiential","enabled":false,"capabilities":["chat","embeddings"],"priority":"routing-experiment"},
+    {"id":"nvidia-nim","enabled":false,"capabilities":["llm","healthcare","genomics","molecular"],"priority":"scientific"},
+    {"id":"direct","enabled":false,"capabilities":["chat","vision","reasoning"],"priority":"reference"}
+  ],
+  "approval_required_for": ["provider_enable","model_change","tool_permission","production_prompt_change","external_write","publication"]
+}

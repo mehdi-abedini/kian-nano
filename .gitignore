@@ -12,6 +12,9 @@ local/
 .omniroute/
 node_modules/
 __pycache__/
+.pytest_cache/
+.venv/
+platform/external/nextflow-agent-skills/
 *.log
 
 # OS/editor

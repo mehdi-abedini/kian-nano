@@ -1,0 +1,19 @@
+﻿{
+  "schema_version": "1.0",
+  "pipeline": "nf-core/sarek",
+  "version": "3.10.0",
+  "schema_sources": [
+    "https://raw.githubusercontent.com/nf-core/sarek/3.10.0/nextflow_schema.json",
+    "https://raw.githubusercontent.com/nf-core/sarek/3.10.0/assets/schema_input.json"
+  ],
+  "local_cache": [
+    "registry/sarek-3.10.0-nextflow_schema.json",
+    "registry/sarek-3.10.0-schema_input.json"
+  ],
+  "policy": {
+    "version_pin_required": true,
+    "schema_runtime_validation_required": true,
+    "human_genomic_data_allowed": false,
+    "clinical_claims_allowed": false
+  }
+}

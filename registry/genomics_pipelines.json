@@ -1,0 +1,7 @@
+{
+  "schema_version": "1.0",
+  "pipelines": [
+    {"id":"nfcore-sarek","engine":"Nextflow","repository":"nf-core/sarek","version":"3.10.0","modalities":["WGS","WES","targeted"],"tasks":["germline","somatic","variant-analysis"],"profile":"test,docker","license":"MIT"},
+    {"id":"nfcore-variantbenchmarking","engine":"Nextflow","repository":"nf-core/variantbenchmarking","version":"1.5.0","modalities":["variant-benchmarking"],"tasks":["benchmark","SNV","INDEL","SV","CNV"],"profile":"test,docker","license":"MIT"}
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "name": "KNN - Provider Catalog Health",
+  "nodes": [
+    {"parameters":{"rule":{"interval":[{"field":"hours","hoursInterval":6}]}}, "id":"schedule","name":"Every 6h","type":"n8n-nodes-base.scheduleTrigger","typeVersion":1.2,"position":[-520,0]},
+    {"parameters":{"url":"https://api.experientiallabs.ai/api/models?sort=preferred&limit=20","options":{"response":{"response":{"responseFormat":"json"}}}}, "id":"experiential","name":"Experiential Catalog","type":"n8n-nodes-base.httpRequest","typeVersion":4.2,"position":[-260,0]},
+    {"parameters":{"url":"https://integrate.api.nvidia.com/v1/models","options":{"response":{"response":{"responseFormat":"json"}}}}, "id":"nvidia","name":"NVIDIA Catalog","type":"n8n-nodes-base.httpRequest","typeVersion":4.2,"position":[-260,180]},
+    {"parameters":{"jsCode":"return [{json:{checkedAt:new Date().toISOString(),sources:$input.all().map(i=>i.json)}}];"}, "id":"merge","name":"Health Snapshot","type":"n8n-nodes-base.code","typeVersion":2,"position":[0,90]},
+    {"parameters":{"method":"POST","url":"http://host.docker.internal:8090/internal/provider-snapshot","sendBody":true,"specifyBody":"json","jsonBody":"={{$json}}","options":{}}, "id":"store","name":"Store Snapshot","type":"n8n-nodes-base.httpRequest","typeVersion":4.2,"position":[280,90]}
+  ],
+  "connections":{"Every 6h":{"main":[[{"node":"Experiential Catalog","type":"main","index":0},{"node":"NVIDIA Catalog","type":"main","index":0}]]},"Experiential Catalog":{"main":[[{"node":"Health Snapshot","type":"main","index":0}]]},"NVIDIA Catalog":{"main":[[{"node":"Health Snapshot","type":"main","index":0}]]},"Health Snapshot":{"main":[[{"node":"Store Snapshot","type":"main","index":0}]]}},
+  "active":false,
+  "settings":{"executionOrder":"v1"},
+  "tags":[]
+}

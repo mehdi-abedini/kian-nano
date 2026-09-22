@@ -1,0 +1,13 @@
+{
+  "name": "KNN - GitHub Agent Ecosystem Discovery",
+  "nodes": [
+    {"parameters":{"rule":{"interval":[{"field":"hours","hoursInterval":24}]}}, "id":"schedule","name":"Daily","type":"n8n-nodes-base.scheduleTrigger","typeVersion":1.2,"position":[-520,0]},
+    {"parameters":{"url":"https://api.github.com/search/repositories?q=agent+orchestration+AI+gateway+agent+framework&sort=updated&order=desc&per_page=20","options":{"response":{"response":{"responseFormat":"json"}}}}, "id":"github","name":"GitHub Search","type":"n8n-nodes-base.httpRequest","typeVersion":4.2,"position":[-280,0]},
+    {"parameters":{"jsCode":"const items=$input.first().json.items||[]; return items.map(r=>({json:{name:r.full_name,url:r.html_url,stars:r.stargazers_count,updated:r.updated_at,license:r.license?.spdx_id||null,description:r.description||''}}));"}, "id":"normalize","name":"Normalize Candidates","type":"n8n-nodes-base.code","typeVersion":2,"position":[0,0]},
+    {"parameters":{"method":"POST","url":"http://host.docker.internal:8090/internal/update-proposals","sendBody":true,"specifyBody":"json","jsonBody":"={{ {source:'github', candidates:$input.all().map(i=>i.json), mode:'proposal-only'} }}","options":{}}, "id":"proposal","name":"Send Proposal Batch","type":"n8n-nodes-base.httpRequest","typeVersion":4.2,"position":[280,0]}
+  ],
+  "connections":{"Daily":{"main":[[{"node":"GitHub Search","type":"main","index":0}]]},"GitHub Search":{"main":[[{"node":"Normalize Candidates","type":"main","index":0}]]},"Normalize Candidates":{"main":[[{"node":"Send Proposal Batch","type":"main","index":0}]]}},
+  "active":false,
+  "settings":{"executionOrder":"v1"},
+  "tags":[]
+}
