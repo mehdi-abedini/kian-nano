@@ -23,7 +23,7 @@ Versions are pinned deliberately. The upstream nf-core documentation identifies 
 
 The agent can generate a reproducible plan and can now reach the local workflow/container runtime through Ubuntu/WSL2. The controlled environment observed in the latest validation is Java 17, Nextflow 26.04.6 and Docker Engine 29.1.3, with approximately 4 vCPU, 3.8 GiB RAM and 1 GiB swap.
 
-A controlled Sarek 3.10.0 smoke reached the intended preprocessing and germline-Strelka orchestration stages, but the current orchestration gate remains open because a clean exit-0 rerun after the disposable smoke patch has not yet been captured. No human genomic data should be used until that gate is explicitly passed.
+A controlled Sarek 3.10.0 smoke completed successfully on Ubuntu/WSL2 using the public nf-core test dataset. The clean run exited successfully, produced trace/report/timeline artifacts and non-empty Sarek outputs, and a subsequent -resume validation completed with 22 cached processes and 1 executed process. This clears the controlled orchestration gate for public/test-data execution. No human genomic data should be used until the separate data-governance and validation gates are explicitly passed.
 
 ## Expected execution sequence
 
