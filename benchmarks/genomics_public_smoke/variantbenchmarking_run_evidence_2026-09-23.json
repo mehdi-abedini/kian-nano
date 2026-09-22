@@ -1,0 +1,29 @@
+{
+  "id": "variantbenchmarking_public_smoke_v1_2026-09-23",
+  "category": "independent-genomic-benchmark",
+  "workflow": {"repository": "nf-core/variantbenchmarking", "version": "1.5.0", "analysis": "germline", "variant_type": "structural", "method": "svanalyzer", "truth_id": "HG002", "genome": "GRCh37", "reference": "chr21_as21.fa", "nextflow": "25.04.0", "container_engine": "docker"},
+  "privacy": "public-data-only",
+  "status": "PASS",
+  "exit_code": 0,
+  "processes": {"succeeded": 73, "failed": 0, "aborted": 0, "cached": 70, "executed": 3},
+  "resume_validation": {"cached_processes": 70, "executed_processes": 3, "failed_processes": 0},
+  "artifacts": {
+    "trace": {"path": "/opt/knn-variantbenchmarking/trace11-final.txt", "exists": true, "non_empty": true, "bytes": 13312},
+    "report": {"path": "/opt/knn-variantbenchmarking/report11-final.html", "exists": true, "non_empty": true, "bytes": 3145728},
+    "timeline": {"path": "/opt/knn-variantbenchmarking/timeline11-final.html", "exists": true, "non_empty": true, "bytes": 275456},
+    "multiqc_report": {"path": "/opt/knn-variantbenchmarking/out11/structural/multiqc/multiqc_report.html", "exists": true, "non_empty": true},
+    "summary_csv": {"path": "/opt/knn-variantbenchmarking/out11/structural/summary/tables/svbenchmark/svbenchmark.summary.csv", "exists": true, "non_empty": true}
+  },
+  "benchmark_metrics": [
+    {"tool": "delly", "TP_base": 22, "FP": 75, "TP_comp": 22, "FN": 155, "Recall": 0.1243, "Precision": 0.2424, "F1": 0.164332399626517},
+    {"tool": "lumpy", "TP_base": 21, "FP": 69, "TP_comp": 21, "FN": 156, "Recall": 0.1186, "Precision": 0.2333, "F1": 0.157303370786517},
+    {"tool": "manta", "TP_base": 65, "FP": 1028, "TP_comp": 65, "FN": 112, "Recall": 0.3672, "Precision": 0.0595, "F1": 0.102362204724409}
+  ],
+  "validation_notes": [
+    "Pipeline completed successfully with exit code 0.",
+    "All benchmark result and reporting processes completed without failure.",
+    "MultiQC report and benchmark summary artifacts are present and non-empty.",
+    "Metrics are descriptive outputs of the public nf-core test dataset and are not claims of clinical performance."
+  ],
+  "last_verified": "2026-09-23"
+}
