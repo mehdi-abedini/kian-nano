@@ -1,0 +1,38 @@
+{
+  "artifacts": {
+    "report": {
+      "bytes": 1720422,
+      "exists": true,
+      "non_empty": true
+    },
+    "timeline": {
+      "bytes": 259637,
+      "exists": true,
+      "non_empty": true
+    },
+    "trace": {
+      "bytes": 4104,
+      "exists": true,
+      "non_empty": true
+    }
+  },
+  "exit_code": 0,
+  "outputs": {
+    "non_empty_file_count": 176
+  },
+  "privacy": "public-data-only",
+  "processes": {
+    "failed": 0,
+    "succeeded": 23
+  },
+  "resume_validation": {
+    "cached_processes": 22,
+    "executed_processes": 1,
+    "failed_processes": 0
+  },
+  "status": "PASS",
+  "workflow": {
+    "repository": "nf-core/sarek",
+    "version": "3.10.0"
+  }
+}
