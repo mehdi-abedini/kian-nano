@@ -22,3 +22,4 @@ platform/external/nextflow-agent-skills/
 Thumbs.db
 .vscode/
 .idea/
+platform/runtime/update_proposals.jsonl
