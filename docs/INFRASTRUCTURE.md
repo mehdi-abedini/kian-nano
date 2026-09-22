@@ -30,7 +30,7 @@ The repository defines an orchestration architecture but does not yet contain a 
 
 ### 3. Evidence/retrieval layer
 
-There is no implemented evidence service with source acquisition, DOI/PubMed/patent retrieval, date snapshots, deduplication, provenance, citation validation, and evidence grading.
+A minimum append-only, hash-chained evidence ledger is now implemented and verified for the public execution gates. Full evidence retrieval with source acquisition, DOI/PubMed/patent retrieval, date snapshots, deduplication, citation validation, and automated evidence grading remains to be implemented.
 
 ### 4. Persistent knowledge boundary
 
@@ -64,7 +64,7 @@ There is no production scheduler for recurring literature surveillance, patent m
 
 1. Establish a stable, scoped model-gateway credential and deterministic runtime test.
 2. Implement the orchestrator and specialist execution contract.
-3. Implement evidence retrieval/provenance and automated evaluation.
+3. Expand evidence retrieval/provenance and implement automated runtime evaluation.
 4. Add private knowledge storage with strict public/private isolation.
 5. Add approval queue, audit trail, scheduling, and observability.
 6. Connect the WordPress request surface only after the runtime passes the evaluation gate.
