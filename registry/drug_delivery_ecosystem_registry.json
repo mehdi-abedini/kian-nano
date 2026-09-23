@@ -1,0 +1,32 @@
+{
+  "schema_version": "0.1",
+  "updated": "2026-09-23",
+  "classification": "PUBLIC-SANITIZED",
+  "entries": [
+    {"id":"github:evancollins1/LNPDB","class":"dataset","domain":"lnp","role":"LNP formulation data","status":"inspect","license":"MIT","url":"https://github.com/evancollins1/LNPDB"},
+    {"id":"github:evancollins1/LNPBO","class":"optimizer","domain":"lnp","role":"Bayesian optimization","status":"inspect","license":"MIT","url":"https://github.com/evancollins1/LNPBO"},
+    {"id":"github:AsalMehradfar/LANTERN","class":"model","domain":"lnp","role":"LNP computational modelling","status":"inspect","url":"https://github.com/AsalMehradfar/LANTERN"},
+    {"id":"github:MaoResearchGroup/ml_lnp_design_rules","class":"design_rules","domain":"lnp","role":"ML-derived design rules","status":"inspect_archived","url":"https://github.com/MaoResearchGroup/ml_lnp_design_rules"},
+    {"id":"github:longbaobaozhuiwen/LNPAgent","class":"agent","domain":"lnp","role":"LNP agent pattern","status":"inspect","url":"https://github.com/longbaobaozhuiwen/LNPAgent"},
+    {"id":"github:Martini-Force-Field-Initiative/M3_Ionizable_Lipids","class":"simulation","domain":"lipids","role":"ionizable lipid simulation","status":"inspect","url":"https://github.com/Martini-Force-Field-Initiative/M3_Ionizable_Lipids"},
+    {"id":"github:mims-harvard/TDC","class":"benchmark","domain":"therapeutics","role":"datasets tasks benchmarks oracles","status":"priority","license":"MIT","url":"https://github.com/mims-harvard/TDC"},
+    {"id":"github:Genentech/CLADD","class":"agent","domain":"drug_discovery","role":"RAG collaborative agents","status":"priority","url":"https://github.com/Genentech/CLADD"},
+    {"id":"github:ur-whitelab/chemcrow-public","class":"agent","domain":"chemistry","role":"tool-using chemistry agent","status":"priority","license":"MIT","url":"https://github.com/ur-whitelab/chemcrow-public"},
+    {"id":"github:aimclub/CoScientist","class":"agent","domain":"science","role":"multi-agent scientific discovery","status":"priority","url":"https://github.com/aimclub/CoScientist"},
+    {"id":"github:ComPlat/DELFIN","class":"workflow","domain":"computational_chemistry","role":"workflow integration","status":"inspect","url":"https://github.com/ComPlat/DELFIN"},
+    {"id":"github:HayesYu/EMolAgent","class":"agent","domain":"chemistry_materials","role":"agent pattern","status":"inspect","license":"MIT","url":"https://github.com/HayesYu/EMolAgent"},
+    {"id":"github:OSU-NLP-Group/ChemToolAgent","class":"agent","domain":"chemistry","role":"chemistry tool routing","status":"inspect","url":"https://github.com/OSU-NLP-Group/ChemToolAgent"},
+    {"id":"github:Noel-Research-Group/Robochem_Flex","class":"automation","domain":"self_driving_lab","role":"robotic closed-loop experimentation","status":"priority","license":"Apache-2.0","url":"https://github.com/Noel-Research-Group/Robochem_Flex"},
+    {"id":"web:tdcommons","class":"platform","domain":"therapeutics","role":"AI-ready therapeutic data and benchmarks","status":"priority","url":"https://tdcommons.ai"},
+    {"id":"web:enanomapper","class":"database","domain":"nanoinformatics","role":"nanomaterial characterization and toxicity","status":"priority","url":"https://www.enanomapper.net/data"},
+    {"id":"web:nanocommons","class":"platform","domain":"nanoinformatics","role":"FAIR nanoinformatics knowledge infrastructure","status":"priority","url":"https://nanocommons.github.io/user-handbook/data-management/data-resources/NanoCommons-KB/"},
+    {"id":"web:ucla_dimr","class":"lab","domain":"drug_delivery","role":"computational pharmaceutics and AI/ML","status":"monitor","url":"https://www.ucl.ac.uk/life-sciences/pharmacy/research/school-pharmacy-digital-silico-medicines-research-group-dimr"},
+    {"id":"web:ucl_ml_dds","class":"lab_project","domain":"drug_delivery","role":"ML formulation/drug delivery","status":"monitor","url":"https://www.ucl.ac.uk/life-sciences/pharmacy/study/mphilphd-and-mres-study/self-funded-phd-projects"},
+    {"id":"web:kohane_lab","class":"lab","domain":"drug_delivery","role":"biomaterials drug delivery nanomedicine","status":"monitor","url":"https://kohane.tch.harvard.edu/research/"},
+    {"id":"web:eth_ai_medicine","class":"research_center","domain":"medical_ai","role":"AI medicine and generative molecular/tissue design","status":"monitor","url":"https://ai.ethz.ch/research/core-areas/ai-medicine.html"},
+    {"id":"journal:ADDR:2026_AI_ML_Drug_Delivery","class":"literature","domain":"drug_delivery","role":"AI/ML optimization special issue","status":"priority","url":"https://www.sciencedirect.com/science/article/pii/S0169409X26000153"},
+    {"id":"journal:JCR:2026_LNP_AI","class":"literature","domain":"lnp","role":"high-throughput AI LNP design","status":"priority","url":"https://www.sciencedirect.com/science/article/pii/S0168365925011873"},
+    {"id":"journal:NRB:2026_NP_ML","class":"literature","domain":"nanomedicine","role":"ML + MD + PINN + autonomous lab framework","status":"priority","url":"https://www.nature.com/articles/s44222-026-00495-7"},
+    {"id":"journal:EJPB:2026_AI_DDS","class":"literature","domain":"drug_delivery","role":"AI formulation/QbD review","status":"priority","url":"https://www.sciencedirect.com/science/article/abs/pii/S0939641126001542"}
+  ]
+}

@@ -17,3 +17,9 @@
 ## Known limitations
 - GitHub repository creation is pending because the connected GitHub integration exposes repository read/write operations but not repository creation.
 - Public release must occur only after the repository owner creates or authorizes the target repository.
+
+## 0.3.0 — 2026-09-23
+- Added cross-domain capability registry and evidence-aware routing primitives.
+- Repeated Drug Delivery ecosystem discovery with stricter capability/applicability/evidence boundaries.
+- Extended analogous ecosystem review to Genomics/NGS, Neuroscience/BCI, Biomedical Engineering, Petroleum/Energy, and IP/Technology Foresight.
+- Added domain-specific routing gates and public/private registry boundary documentation.
