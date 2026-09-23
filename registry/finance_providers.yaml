@@ -1,0 +1,80 @@
+# Finance provider registry — research/analysis routing only.
+# Keys are stored outside source control; licensing must be verified before redistribution.
+version: "1.0"
+last_verified: "2026-09-23"
+providers:
+  - id: tsetmc-rest
+    class: official
+    region: IR
+    markets: [TSE, IFB, IME]
+    capabilities: [quotes, history, market_watch, order_book]
+    realtime: true
+    point_in_time: true
+    url: https://api.tsetmc.com/docs/
+    notes: "Preferred Iranian exchange source; respect access/geo/rate limits."
+  - id: codal
+    class: official
+    region: IR
+    markets: [IR]
+    capabilities: [filings, financial_statements, disclosures]
+    realtime: false
+    point_in_time: true
+    url: https://www.codal.ir/
+    notes: "Primary disclosure source; preserve publication timestamps."
+  - id: eia-api
+    class: official
+    region: global
+    markets: [energy]
+    capabilities: [oil, gas, electricity, inventories, energy_macro]
+    realtime: false
+    point_in_time: true
+    url: https://www.eia.gov/opendata/
+  - id: imf-pcps
+    class: official
+    region: global
+    markets: [commodity, energy, metals, agriculture]
+    capabilities: [commodity_prices, price_indices]
+    realtime: false
+    point_in_time: true
+    url: https://data.imf.org/Datasets/PCPS
+  - id: worldbank-commodity
+    class: official
+    region: global
+    markets: [commodity, energy, metals, agriculture]
+    capabilities: [commodity_prices, monthly_data, forecasts]
+    realtime: false
+    point_in_time: true
+    url: https://www.worldbank.org/en/research/commodity-markets
+  - id: fred-alfred
+    class: official
+    region: global
+    markets: [macro, rates, fx]
+    capabilities: [macro, vintages, revisions, rates]
+    realtime: false
+    point_in_time: true
+    url: https://fred.stlouisfed.org/docs/api/fred/
+  - id: cme-market-data
+    class: licensed
+    region: global
+    markets: [futures, options, commodity, fx]
+    capabilities: [realtime, historical, derivatives]
+    realtime: true
+    point_in_time: true
+    url: https://www.cmegroup.com/market-data/market-data-api.html
+  - id: twelve-data
+    class: licensed
+    region: global
+    markets: [equity, fx, commodity, crypto]
+    capabilities: [quotes, history, technical, commodities]
+    realtime: true
+    point_in_time: false
+    url: https://twelvedata.com/docs
+  - id: streamdata-ir
+    class: licensed
+    region: IR
+    markets: [TSE, FX, commodity, crypto]
+    capabilities: [Iran_markets, gold, fx, global_markets]
+    realtime: true
+    point_in_time: false
+    url: https://streamdata.ir/
+    notes: "Third-party provider; never outrank official sources without evidence."
