@@ -72,3 +72,27 @@ Leave room for:
 - bilingual content pairing
 
 The Academy should remain useful even when AI features are disabled; AI should enrich the information architecture rather than become its only interface.
+
+## Persian-first Academy UX
+
+The Academy's primary information architecture is Persian RTL. Category names, filters, article metadata, search UI, breadcrumbs, pagination, and citation presentation must be designed and tested in Persian first.
+
+Vazir is the primary Persian UI font. English content uses the English typography token set.
+
+Technical content must support mixed-script typography without broken punctuation or directionality. Use bidi isolation for Latin identifiers and preserve the visual order of equations, units, URLs, DOI strings, gene symbols, and chemical formulas.
+
+## Academy SEO
+
+Each public article should have:
+- stable canonical URL
+- Persian title/description
+- English alternate URL when translated
+- hreflang linkage where both versions exist
+- Article/BlogPosting structured data only when the page genuinely satisfies the corresponding schema
+- author/publisher information
+- publication and update timestamps
+- crawlable related-content links
+- sitemap inclusion
+- Open Graph metadata
+
+The Academy should remain indexable and useful without client-side AI features.

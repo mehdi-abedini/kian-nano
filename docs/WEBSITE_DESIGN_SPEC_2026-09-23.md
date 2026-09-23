@@ -79,3 +79,64 @@ Use semantic HTML, stable metadata, canonical URLs, structured data where applic
 ## Production boundary
 
 This is a design proposal. No production website mutation is authorized by this document alone.
+
+## Language and direction — mandatory
+
+The primary website experience is Persian (fa-IR) and RTL. English is the secondary language (en) and LTR.
+
+Design and implementation must therefore be authored RTL-first rather than translating an LTR layout after the fact.
+
+Requirements:
+- Persian/Vazir is the primary UI typography.
+- English typography is a separate token set and must not alter Persian metrics.
+- Navigation, grids, cards, CTA hierarchy, breadcrumbs, article metadata, and Academy taxonomy are RTL in Persian.
+- Technical strings such as DOI, URLs, code, gene symbols, chemical formulas, units, Latin species names, and identifiers use controlled bidi isolation where necessary.
+- Language switching changes document language/direction and preserves semantic page relationships.
+- The English version uses the same KKN design system but is independently laid out LTR.
+- Figma validation must include Persian RTL frames before implementation handoff.
+
+## Motion system
+
+Motion is part of KKN's scientific storytelling, but it is not decoration without a narrative purpose.
+
+Allowed hero concept families:
+1. A restrained rotating DNA double helix.
+2. A molecular/atomic network responding subtly to pointer proximity.
+3. A scientific field/grid whose particles reorganize as the pointer moves.
+4. A mechanism-to-deployment path where nodes activate sequentially.
+5. A slow orbital system suggesting molecular/engineering relationships.
+
+Motion rules:
+- Hero motion must remain secondary to headline, CTA, and evidence.
+- Pointer interaction is progressive enhancement; content and navigation must work without a pointer.
+- No motion should cause layout shift.
+- Prefer transform/opacity/compositor-friendly animation.
+- Use prefers-reduced-motion to provide a reduced/static mode; an explicit site-level Motion toggle may also be provided.
+- Avoid continuous high-frequency particle movement.
+- Avoid excessive parallax, flashing, rapid zoom, or competing motion fields.
+- Motion should serve orientation, feedback, transition, or narrative.
+- Mobile receives a lower-complexity motion profile.
+
+Performance gate:
+- Target LCP < 2.5 s, INP < 200 ms, CLS < 0.1 at the 75th percentile.
+- Heavy WebGL/canvas is not allowed in the critical rendering path without a measured performance justification.
+- Static poster/fallback imagery must exist for reduced-motion, low-power, or unsupported contexts.
+
+## Accessibility and SEO
+
+Use semantic HTML landmarks, logical heading hierarchy, keyboard-visible focus, sufficient contrast, functional alt text, accessible labels, and a coherent tab order.
+
+SEO architecture must include:
+- unique title/meta description strategy
+- canonical URLs
+- XML sitemap
+- robots directives
+- Open Graph/social metadata
+- JSON-LD where applicable
+- semantic HTML
+- internal linking
+- multilingual hreflang relationships
+- Persian and English page-specific metadata
+- stable, crawlable URLs
+
+Core Web Vitals are release gates rather than post-launch diagnostics.
