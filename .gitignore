@@ -26,3 +26,7 @@ platform/runtime/update_proposals.jsonl
 
 # Local candidate evaluation work
 .work/
+
+# Confidential product implementation
+/CONFIDENTIAL/
+*.confidential.md
