@@ -1,0 +1,31 @@
+cff-version: 1.2.0
+title: "Kian Nano Karno Research Agent"
+message: "If this software or architecture contributes to your research, please cite this repository."
+type: software
+authors:
+  - family-names: Abedini
+    given-names: Mehdi
+    affiliation: "Kian Nano Karno"
+repository-code: "https://github.com/mehdi-abedini/kian-nano"
+repository: "https://github.com/mehdi-abedini/kian-nano"
+license: MIT
+abstract: >-
+  Evidence-grounded scientific research agent and orchestration framework
+  for reproducible literature review, patent research, technology intelligence,
+  biomedical research, industrial R&D, process engineering, and quantitative research.
+keywords:
+  - scientific research
+  - scientific AI
+  - research agent
+  - evidence-based research
+  - literature review
+  - patent research
+  - technology intelligence
+  - reproducible research
+  - drug discovery
+  - drug delivery
+  - bioinformatics
+  - genomics
+  - nanotechnology
+  - process engineering
+  - quantitative research
