@@ -1,0 +1,4 @@
+{
+  "task": {"required_capability":"variant_calling","privacy":"public"},
+  "registry": "registry/cross_domain_capability_registry.json"
+}

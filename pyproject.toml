@@ -1,0 +1,52 @@
+[build-system]
+requires = ["setuptools>=77"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "kian-nano-karno-research-agent"
+version = "0.4.0"
+description = "Evidence-grounded scientific research orchestration framework"
+readme = "README.md"
+requires-python = ">=3.11"
+license = "MIT"
+authors = [{name = "Mehdi Abedini"}]
+keywords = ["scientific-ai", "research-agent", "evidence", "orchestration", "reproducibility"]
+
+[project.optional-dependencies]
+test = ["pytest>=8"]
+
+[project.scripts]
+kian-nano = "kian_nano_cli:main"
+
+[tool.setuptools]
+py-modules = [
+  "active_learning_contract",
+  "admet_benchmark_contract",
+  "biomedical_validation",
+  "capability_registry",
+  "computational_design_contract",
+  "design_repository_collector",
+  "drug_delivery_ontology",
+  "evidence_contract",
+  "evidence_ledger",
+  "finance_market_contract",
+  "finance_provider_registry",
+  "finance_quant_router",
+  "formulation_intelligence_contract",
+  "gateway_router",
+  "genomics_agent",
+  "genomics_execution_contract",
+  "genomics_public_execution_contract",
+  "genomics_schema_fetcher",
+  "kian_nano_cli",
+  "molecular_intelligence_contract",
+  "nanobio_interaction_contract",
+  "portfolio_orchestrator",
+  "reference_emulator",
+  "translation_ip_contract",
+  "validation_package_contract"
+]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-ra"

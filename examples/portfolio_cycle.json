@@ -1,0 +1,6 @@
+[
+  {"project_id":"literature","status":"ready","dependencies":[]},
+  {"project_id":"analysis","status":"ready","dependencies":["literature"]},
+  {"project_id":"report","status":"ready","dependencies":["analysis"]},
+  {"project_id":"independent_lane","status":"ready","dependencies":[]}
+]

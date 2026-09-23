@@ -1,0 +1,7 @@
+{
+  "claim": "Example claim only",
+  "claim_type": "observed_evidence",
+  "evidence": [{"source_id":"example-source","retrieved_at":"2026-09-23T00:00:00Z","version":"example"}],
+  "uncertainty": "Example only; not scientific evidence",
+  "validation_required": true
+}

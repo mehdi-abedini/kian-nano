@@ -30,3 +30,4 @@ platform/runtime/update_proposals.jsonl
 # Confidential product implementation
 /CONFIDENTIAL/
 *.confidential.md
+kian_nano_karno_research_agent.egg-info/
