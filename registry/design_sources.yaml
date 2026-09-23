@@ -1,0 +1,111 @@
+version: "0.1"
+registry: design-intelligence
+owner: Kian Nano Karno
+
+refresh_policy:
+  fast_scan: weekly
+  review: monthly
+  architecture_review: quarterly
+  rule: "Refresh may propose changes; it may not silently mutate KKN design tokens."
+
+provenance_classes:
+  first_party:
+    meaning: "Official design guidance published by the organization itself."
+    trust: high
+  reverse_engineered:
+    meaning: "Community analysis extracted from public sites or CSS."
+    trust: medium
+  extraction_tool:
+    meaning: "Tool-generated extraction from a public URL."
+    trust: medium-low
+  community_analysis:
+    meaning: "Human or agent analysis without first-party authority."
+    trust: variable
+sources:
+  - id: google-design-md-spec
+    source_type: first_party
+    organization: Google Labs
+    url: https://github.com/google-labs-code/design.md
+    role: canonical-format-reference
+    review_due: 2026-10-23
+
+  - id: voltagent-awesome-design-md
+    source_type: reverse_engineered
+    organization: VoltAgent
+    url: https://github.com/VoltAgent/awesome-design-md
+    role: broad-design-benchmark-library
+    review_due: 2026-10-23
+
+  - id: voltagent-official-design-md
+    source_type: community_analysis
+    organization: VoltAgent
+    url: https://github.com/VoltAgent/official-design-md
+    role: first-party-design-md-discovery-index
+    review_due: 2026-10-23
+
+  - id: allenai-design
+    source_type: first_party
+    organization: Ai2
+    url: https://github.com/allenai/design
+    role: production-design-system-reference
+    review_due: 2026-10-23
+  - id: ifuryst-design-md
+    source_type: extraction_tool
+    organization: iFurySt
+    url: https://github.com/iFurySt/DESIGN.md
+    role: url-to-design-md-agent-skill-reference
+    review_due: 2026-10-23
+
+  - id: jeftarmascarenhas-design-md
+    source_type: extraction_tool
+    organization: community
+    url: https://github.com/jeftarmascarenhas/design.md
+    role: authoring-validation-reference
+    review_due: 2026-10-23
+
+  - id: dimabraven-design-md
+    source_type: community_analysis
+    organization: community
+    url: https://github.com/dimabraven/design-md
+    role: searchable-design-registry-reference
+    review_due: 2026-10-23
+
+  - id: adityarajdigital-designmd
+    source_type: extraction_tool
+    organization: community
+    url: https://github.com/adityarajdigital/designmd
+    role: production-url-extraction-reference
+    review_due: 2026-10-23
+  - id: sunil-dsb-design-md
+    source_type: extraction_tool
+    organization: community
+    url: https://github.com/sunil-dsb/design.md
+    role: public-site-extraction-reference
+    review_due: 2026-10-23
+
+  - id: soulcore-design-md
+    source_type: community_analysis
+    organization: Soulcore
+    url: https://github.com/soulcore-dev/soul-design-md
+    role: interaction-motion-accessibility-reference
+    review_due: 2026-10-23
+
+  - id: figma-ai-design-workflows
+    source_type: first_party
+    organization: Figma
+    url: https://help.figma.com/hc/en-us/articles/38978644498199-AI-workflows-collection-Best-practices-to-help-Figma-AI-understand-your-design-system
+    role: agentic-design-system-practice
+    review_due: 2026-10-23
+
+  - id: figma-mcp
+    source_type: first_party
+    organization: Figma
+    url: https://help.figma.com/hc/en-us/articles/39216419318551-Get-started-with-the-Figma-MCP-server
+    role: design-code-context-bridge
+    review_due: 2026-10-23
+adoption_rules:
+  - "First-party sources define facts about their own systems; they do not define KKN identity."
+  - "Reverse-engineered sources are benchmark evidence only."
+  - "Extraction tools require independent validation."
+  - "No source can directly overwrite design/DESIGN.md."
+  - "Material changes require proposal, diff, validation, and human approval."
