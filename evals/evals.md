@@ -2,8 +2,8 @@
 
 ## Should trigger
 1. Review the literature on nanoparticle drug delivery for a specified target.
-2. Compare reactor designs for [redacted-process] production.
-3. Build a prior-art landscape for a new [redacted-project] process.
+2. Compare alternative industrial reactor designs for a specified chemical process.
+3. Build a prior-art landscape for a specified technology.
 4. Analyze a historical equity strategy with point-in-time controls.
 5. Design an experimental plan for scale-up.
 6. Assess the evidence behind a biomedical mechanism.

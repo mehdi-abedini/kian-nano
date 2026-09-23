@@ -1,4 +1,4 @@
-﻿- id: genentech-spatialagent
+- id: genentech-spatialagent
   category: agent
   organization: Genentech Research
   region: USA
@@ -27,71 +27,6 @@
   kian_suitability: primary-agent-evaluation-reference
   confidence: high
   last_verified: "2026-09-21"
-- id: [redacted-agent]
-  category: specialist-agent
-  organization: Kian Nano Karno
-  region: internal-public-sanitized
-  access: architecture-reference
-  modality: small-molecule-drug-design
-  task: target-evidence-screening-property-prediction-design-control
-  privacy: deployable-locally
-  failure_modes: "data leakage, scaffold memorization, docking overinterpretation, synthetic infeasibility"
-  kian_suitability: core-drug-design-specialist
-  confidence: high
-  last_verified: "2026-09-21"
-
-- id: [redacted-agent]
-  category: specialist-agent
-  organization: Kian Nano Karno
-  region: internal-public-sanitized
-  access: architecture-reference
-  modality: nanoformulation
-  task: carrier-formulation-process-cqa-reasoning
-  privacy: deployable-locally
-  failure_modes: "size-only optimization, batch drift, assay artifacts, scale-up failure"
-  kian_suitability: core-drug-delivery-specialist
-  confidence: high
-  last_verified: "2026-09-21"
-
-- id: [redacted-agent]
-  category: specialist-agent
-  organization: Kian Nano Karno
-  region: internal-public-sanitized
-  access: architecture-reference
-  modality: nanomedicine
-  task: nano-bio-interaction-control-and-translation
-  privacy: deployable-locally
-  failure_modes: "corona effects, context dependence, control failure, uptake-efficacy conflation"
-  kian_suitability: core-translational-validation-specialist
-  confidence: high
-  last_verified: "2026-09-21"
-
-- id: [redacted-agent]
-  category: specialist-agent
-  organization: Kian Nano Karno
-  region: internal-public-sanitized
-  access: architecture-reference
-  modality: ADMET
-  task: benchmark-splitting-uncertainty-applicability-domain
-  privacy: deployable-locally
-  failure_modes: "leakage, assay heterogeneity, domain shift, overinterpretation"
-  kian_suitability: core-molecular-intelligence-specialist
-  confidence: high
-  last_verified: "2026-09-21"
-
-- id: [redacted-agent]
-  category: specialist-agent
-  organization: Kian Nano Karno
-  region: internal-public-sanitized
-  access: architecture-reference
-  modality: active-learning
-  task: experiment-selection-budgeted-learning-provenance
-  privacy: deployable-locally
-  failure_modes: "selection bias, budget mismatch, stopping-rule drift, observation/provenance mismatch"
-  kian_suitability: core-experimental-loop-specialist
-  confidence: high
-  last_verified: "2026-09-21"
-
 - id: ai4nucleome-biomaster
   category: external-agent
   organization: AI4Nucleome / HKUST-GZ
@@ -166,69 +101,4 @@
   failure_modes: "workflow metadata drift; hosted-service dependency"
   kian_suitability: workflow-discovery-reference
   confidence: medium
-  last_verified: "2026-09-21"
-
-- id: [redacted-agent]
-  category: specialist-agent
-  organization: Kian Nano Karno
-  region: internal-public-sanitized
-  access: architecture-reference
-  modality: NGS
-  task: workflow-selection-qc-reproducibility
-  privacy: deployable-locally
-  failure_modes: "reference drift, version drift, QC bypass, metadata mismatch"
-  kian_suitability: core-ngs-specialist
-  confidence: high
-  last_verified: "2026-09-21"
-
-- id: [redacted-agent]
-  category: specialist-agent
-  organization: Kian Nano Karno
-  region: internal-public-sanitized
-  access: architecture-reference
-  modality: germline-somatic-variants
-  task: variant-calling-annotation-evidence-interpretation
-  privacy: deployable-locally
-  failure_modes: "caller-specific artifacts, annotation drift, population bias, evidence conflation"
-  kian_suitability: core-variant-specialist
-  confidence: high
-  last_verified: "2026-09-21"
-
-- id: [redacted-agent]
-  category: specialist-agent
-  organization: Kian Nano Karno
-  region: internal-public-sanitized
-  access: architecture-reference
-  modality: bulk-rna-singlecell-spatial
-  task: expression-analysis-cell-state-spatial-inference
-  privacy: deployable-locally
-  failure_modes: "batch effects, ambient RNA, doublets, annotation uncertainty, domain shift"
-  kian_suitability: core-transcriptomics-specialist
-  confidence: high
-  last_verified: "2026-09-21"
-
-- id: [redacted-agent]
-  category: specialist-agent
-  organization: Kian Nano Karno
-  region: internal-public-sanitized
-  access: architecture-reference
-  modality: multi-omics
-  task: provenance-containerization-workflow-execution
-  privacy: deployable-locally
-  failure_modes: "non-determinism, container drift, incomplete provenance, compute-environment mismatch"
-  kian_suitability: core-reproducibility-specialist
-  confidence: high
-  last_verified: "2026-09-21"
-
-- id: [redacted-agent]
-  category: specialist-agent
-  organization: Kian Nano Karno
-  region: internal-public-sanitized
-  access: architecture-reference
-  modality: genomic-foundation-models-agentic-ai
-  task: benchmark-leakage-uncertainty-ood-evaluation
-  privacy: deployable-locally
-  failure_modes: "homology leakage, benchmark contamination, hallucinated code, task mismatch"
-  kian_suitability: core-genomic-ai-evaluation-specialist
-  confidence: high
   last_verified: "2026-09-21"

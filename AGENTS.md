@@ -31,7 +31,7 @@ The public repository contains reusable workflow logic, templates, evaluation pr
 - For IP/foresight, preserve jurisdiction, filing-date, source snapshot and human legal-review gates.
 
 ## Portfolio-wide ecosystem intelligence (2026-09-23)
-- Repeat deep ecosystem discovery across all active research/intelligence lanes before major architecture changes; exclude [redacted-project]-device implementation and website/digital-platform implementation unless explicitly requested.
+- Repeat deep ecosystem discovery across active research/intelligence capability lanes before major architecture changes; implementation-specific private projects remain outside the public package.
 - Use capability-level routing across datasets, models, pipelines, simulations, benchmarks, agents, databases, APIs, literature and validation infrastructure.
 - Finance/quantitative tasks require point-in-time information-set reconstruction, corporate-action handling, market calendars, survivorship/look-ahead controls, transaction costs, revision/vintage handling, and human review for consequential decisions.
 - Iranian finance routing separates TSE/IFB market data, Codal disclosures, IME commodity instruments and supplementary FX/gold data; secondary providers never outrank primary sources without evidence.

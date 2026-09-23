@@ -2,7 +2,7 @@
   "schema_version": "1.0",
   "classification": "PUBLIC-SANITIZED",
   "updated": "2026-09-23",
-  "purpose": "Evidence-aware routing across scientific domains; no private project payloads.",
+  "purpose": "Evidence-aware routing across public scientific and engineering capabilities; no internal project identifiers or private payloads.",
   "capabilities": [
     {
       "id": "dd:lnpdb",
@@ -258,72 +258,6 @@
       "uncertainty_fit": 0.9,
       "integration": 0.8,
       "notes": "Search source only; legal conclusions require human/IP gate."
-    },
-    {
-      "id": "industrial:dra_liquid",
-      "domain": "petroleum_energy",
-      "source_type": "private_research_lane",
-      "capabilities": [
-        "drag_reduction",
-        "flow_assurance",
-        "scale_up"
-      ],
-      "status": "private",
-      "license": "proprietary",
-      "privacy": [
-        "private"
-      ],
-      "relevance": 1,
-      "evidence": 0.0,
-      "reproducibility": 0.0,
-      "maintenance": 1,
-      "uncertainty_fit": 0.5,
-      "integration": 0.5,
-      "notes": "Metadata only; no formulation/process payload."
-    },
-    {
-      "id": "industrial:dra_gas",
-      "domain": "petroleum_energy",
-      "source_type": "private_research_lane",
-      "capabilities": [
-        "gas_transmission",
-        "flow_assurance",
-        "materials_compatibility"
-      ],
-      "status": "private",
-      "license": "proprietary",
-      "privacy": [
-        "private"
-      ],
-      "relevance": 1,
-      "evidence": 0.0,
-      "reproducibility": 0.0,
-      "maintenance": 1,
-      "uncertainty_fit": 0.5,
-      "integration": 0.5,
-      "notes": "Metadata only; patent-sensitive payload excluded."
-    },
-    {
-      "id": "industrial:[redacted-process]",
-      "domain": "petroleum_energy",
-      "source_type": "private_research_lane",
-      "capabilities": [
-        "water_treatment",
-        "oxidation_process",
-        "process_control"
-      ],
-      "status": "private",
-      "license": "proprietary",
-      "privacy": [
-        "private"
-      ],
-      "relevance": 1,
-      "evidence": 0.0,
-      "reproducibility": 0.0,
-      "maintenance": 1,
-      "uncertainty_fit": 0.5,
-      "integration": 0.6,
-      "notes": "Private R&D lane; no formulation or operating parameters."
     },
     {
       "id": "biomed:instrumentation",

@@ -25,7 +25,7 @@
 - Added domain-specific routing gates and public/private registry boundary documentation.
 
 ## 0.4.0 — 2026-09-23
-- Expanded ecosystem review from selected scientific domains to the full active research/intelligence portfolio, with explicit exclusions for [redacted-project]-device and website implementation.
+- Expanded ecosystem review from selected scientific domains to the active public-safe capability portfolio, with private product and production-web implementation kept outside the public package.
 - Added finance/quantitative intelligence registry and routing gates.
 - Added Iran TSE/IFB/IME/Codal and global commodity/macro/energy source layers.
 - Added point-in-time, revision/vintage, corporate-action, market-calendar, survivorship and look-ahead controls to finance routing.

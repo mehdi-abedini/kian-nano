@@ -40,8 +40,6 @@ Public repository content is sanitized and reusable. Confidential company knowle
 
 Private-to-public synchronization is never implicit. Export requires classification, sanitization, and human approval.
 
-## [redacted-project] boundary
-Sensitive [redacted-project] research is outside the public repository and public agent package. Only non-sensitive orchestration concepts may be documented publicly.
 
 ## Stage completion
 A stage is complete only when acceptance criteria are satisfied, state is persisted, the management report is written, and required approval gates are recorded.
