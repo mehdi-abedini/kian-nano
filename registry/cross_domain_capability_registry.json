@@ -4,16 +4,442 @@
   "updated": "2026-09-23",
   "purpose": "Evidence-aware routing across scientific domains; no private project payloads.",
   "capabilities": [
-    {"id":"dd:lnpdb","domain":"drug_delivery","source_type":"dataset","capabilities":["lnp_formulation","nanocarrier_design"],"status":"inspect","license":"MIT","privacy":["public"],"relevance":1.0,"evidence":0.75,"reproducibility":0.85,"maintenance":0.7,"uncertainty_fit":0.75,"integration":0.8,"notes":"Public LNP formulation dataset; verify schema/version before use."},
-    {"id":"dd:tdc","domain":"drug_delivery","source_type":"benchmark","capabilities":["therapeutics_benchmark","molecule_generation"],"status":"use","license":"MIT","privacy":["public"],"relevance":0.9,"evidence":0.9,"reproducibility":0.9,"maintenance":0.9,"uncertainty_fit":0.85,"integration":0.9,"notes":"Therapeutics datasets/tasks/benchmarks."},
-    {"id":"gen:sarek","domain":"genomics","source_type":"pipeline","capabilities":["variant_calling","germline","somatic","wgs","wes"],"status":"use","license":"MIT","privacy":["public","private"],"relevance":1.0,"evidence":0.95,"reproducibility":0.95,"maintenance":0.9,"uncertainty_fit":0.9,"integration":0.95,"version":"3.10.0","notes":"Pinned public/test execution already validated locally."},
-    {"id":"gen:variantbenchmarking","domain":"genomics","source_type":"benchmark","capabilities":["variant_benchmarking","snv","indel","sv","cnv"],"status":"use","license":"MIT","privacy":["public"],"relevance":1.0,"evidence":0.95,"reproducibility":0.95,"maintenance":0.85,"uncertainty_fit":0.95,"integration":0.9,"version":"1.5.0","notes":"Independent benchmark workflow; public-data gate verified."},
-    {"id":"gen:deepvariant","domain":"genomics","source_type":"model","capabilities":["variant_calling","snv","indel"],"status":"inspect","license":"BSD-3-Clause","privacy":["public","private"],"relevance":0.95,"evidence":0.9,"reproducibility":0.9,"maintenance":0.9,"uncertainty_fit":0.85,"integration":0.85,"notes":"Use only after exact release/container/reference lock."},
-    {"id":"neuro:mne","domain":"neuroscience_bci","source_type":"software","capabilities":["eeg","meg","fnirs","signal_processing","decoding"],"status":"inspect","license":"BSD-3-Clause","privacy":["public","private"],"relevance":0.95,"evidence":0.85,"reproducibility":0.9,"maintenance":0.95,"uncertainty_fit":0.9,"integration":0.9,"notes":"Core electrophysiology analysis stack; data governance remains separate."},
-    {"id":"neuro:physionet_challenges","domain":"neuroscience_bci","source_type":"benchmark","capabilities":["biosignal_benchmark","classification","physiological_signal"],"status":"inspect","license":"varies","privacy":["public"],"relevance":0.85,"evidence":0.9,"reproducibility":0.9,"maintenance":0.9,"uncertainty_fit":0.9,"integration":0.85,"notes":"Challenge datasets require per-dataset license and task verification."},
-    {"id":"biomed:simvascular","domain":"biomedical_engineering","source_type":"simulation","capabilities":["cardiovascular_simulation","cfd","patient_specific_modeling"],"status":"inspect","license":"Apache-2.0","privacy":["public","private"],"relevance":0.9,"evidence":0.85,"reproducibility":0.85,"maintenance":0.9,"uncertainty_fit":0.8,"integration":0.8,"notes":"Mechanistic simulation requires geometry/material/model validation."},
-    {"id":"energy:opm","domain":"petroleum_energy","source_type":"simulation","capabilities":["reservoir_simulation","flow_simulation","uncertainty_workflow"],"status":"inspect","license":"GPL-3.0","privacy":["public","private"],"relevance":0.9,"evidence":0.85,"reproducibility":0.9,"maintenance":0.9,"uncertainty_fit":0.9,"integration":0.8,"notes":"Mechanistic reservoir simulation; proprietary field data stays isolated."},
-    {"id":"energy:mrst","domain":"petroleum_energy","source_type":"simulation","capabilities":["reservoir_simulation","multiphase_flow","geothermal"],"status":"inspect","license":"GPL-3.0","privacy":["public","private"],"relevance":0.9,"evidence":0.85,"reproducibility":0.9,"maintenance":0.85,"uncertainty_fit":0.9,"integration":0.8,"notes":"Research simulator; version/module lock required."},
-    {"id":"ip:patent_search","domain":"ip_technology_foresight","source_type":"database","capabilities":["prior_art","patent_landscape","technology_foresight"],"status":"inspect","license":"service","privacy":["public","private"],"relevance":0.95,"evidence":0.9,"reproducibility":0.85,"maintenance":0.9,"uncertainty_fit":0.9,"integration":0.8,"notes":"Search source only; legal conclusions require human/IP gate."}
+    {
+      "id": "dd:lnpdb",
+      "domain": "drug_delivery",
+      "source_type": "dataset",
+      "capabilities": [
+        "lnp_formulation",
+        "nanocarrier_design"
+      ],
+      "status": "inspect",
+      "license": "MIT",
+      "privacy": [
+        "public"
+      ],
+      "relevance": 1.0,
+      "evidence": 0.75,
+      "reproducibility": 0.85,
+      "maintenance": 0.7,
+      "uncertainty_fit": 0.75,
+      "integration": 0.8,
+      "notes": "Public LNP formulation dataset; verify schema/version before use."
+    },
+    {
+      "id": "dd:tdc",
+      "domain": "drug_delivery",
+      "source_type": "benchmark",
+      "capabilities": [
+        "therapeutics_benchmark",
+        "molecule_generation"
+      ],
+      "status": "use",
+      "license": "MIT",
+      "privacy": [
+        "public"
+      ],
+      "relevance": 0.9,
+      "evidence": 0.9,
+      "reproducibility": 0.9,
+      "maintenance": 0.9,
+      "uncertainty_fit": 0.85,
+      "integration": 0.9,
+      "notes": "Therapeutics datasets/tasks/benchmarks."
+    },
+    {
+      "id": "gen:sarek",
+      "domain": "genomics",
+      "source_type": "pipeline",
+      "capabilities": [
+        "variant_calling",
+        "germline",
+        "somatic",
+        "wgs",
+        "wes"
+      ],
+      "status": "use",
+      "license": "MIT",
+      "privacy": [
+        "public",
+        "private"
+      ],
+      "relevance": 1.0,
+      "evidence": 0.95,
+      "reproducibility": 0.95,
+      "maintenance": 0.9,
+      "uncertainty_fit": 0.9,
+      "integration": 0.95,
+      "version": "3.10.0",
+      "notes": "Pinned public/test execution already validated locally."
+    },
+    {
+      "id": "gen:variantbenchmarking",
+      "domain": "genomics",
+      "source_type": "benchmark",
+      "capabilities": [
+        "variant_benchmarking",
+        "snv",
+        "indel",
+        "sv",
+        "cnv"
+      ],
+      "status": "use",
+      "license": "MIT",
+      "privacy": [
+        "public"
+      ],
+      "relevance": 1.0,
+      "evidence": 0.95,
+      "reproducibility": 0.95,
+      "maintenance": 0.85,
+      "uncertainty_fit": 0.95,
+      "integration": 0.9,
+      "version": "1.5.0",
+      "notes": "Independent benchmark workflow; public-data gate verified."
+    },
+    {
+      "id": "gen:deepvariant",
+      "domain": "genomics",
+      "source_type": "model",
+      "capabilities": [
+        "variant_calling",
+        "snv",
+        "indel"
+      ],
+      "status": "inspect",
+      "license": "BSD-3-Clause",
+      "privacy": [
+        "public",
+        "private"
+      ],
+      "relevance": 0.95,
+      "evidence": 0.9,
+      "reproducibility": 0.9,
+      "maintenance": 0.9,
+      "uncertainty_fit": 0.85,
+      "integration": 0.85,
+      "notes": "Use only after exact release/container/reference lock."
+    },
+    {
+      "id": "neuro:mne",
+      "domain": "neuroscience_bci",
+      "source_type": "software",
+      "capabilities": [
+        "eeg",
+        "meg",
+        "fnirs",
+        "signal_processing",
+        "decoding"
+      ],
+      "status": "inspect",
+      "license": "BSD-3-Clause",
+      "privacy": [
+        "public",
+        "private"
+      ],
+      "relevance": 0.95,
+      "evidence": 0.85,
+      "reproducibility": 0.9,
+      "maintenance": 0.95,
+      "uncertainty_fit": 0.9,
+      "integration": 0.9,
+      "notes": "Core electrophysiology analysis stack; data governance remains separate."
+    },
+    {
+      "id": "neuro:physionet_challenges",
+      "domain": "neuroscience_bci",
+      "source_type": "benchmark",
+      "capabilities": [
+        "biosignal_benchmark",
+        "classification",
+        "physiological_signal"
+      ],
+      "status": "inspect",
+      "license": "varies",
+      "privacy": [
+        "public"
+      ],
+      "relevance": 0.85,
+      "evidence": 0.9,
+      "reproducibility": 0.9,
+      "maintenance": 0.9,
+      "uncertainty_fit": 0.9,
+      "integration": 0.85,
+      "notes": "Challenge datasets require per-dataset license and task verification."
+    },
+    {
+      "id": "biomed:simvascular",
+      "domain": "biomedical_engineering",
+      "source_type": "simulation",
+      "capabilities": [
+        "cardiovascular_simulation",
+        "cfd",
+        "patient_specific_modeling"
+      ],
+      "status": "inspect",
+      "license": "Apache-2.0",
+      "privacy": [
+        "public",
+        "private"
+      ],
+      "relevance": 0.9,
+      "evidence": 0.85,
+      "reproducibility": 0.85,
+      "maintenance": 0.9,
+      "uncertainty_fit": 0.8,
+      "integration": 0.8,
+      "notes": "Mechanistic simulation requires geometry/material/model validation."
+    },
+    {
+      "id": "energy:opm",
+      "domain": "petroleum_energy",
+      "source_type": "simulation",
+      "capabilities": [
+        "reservoir_simulation",
+        "flow_simulation",
+        "uncertainty_workflow"
+      ],
+      "status": "inspect",
+      "license": "GPL-3.0",
+      "privacy": [
+        "public",
+        "private"
+      ],
+      "relevance": 0.9,
+      "evidence": 0.85,
+      "reproducibility": 0.9,
+      "maintenance": 0.9,
+      "uncertainty_fit": 0.9,
+      "integration": 0.8,
+      "notes": "Mechanistic reservoir simulation; proprietary field data stays isolated."
+    },
+    {
+      "id": "energy:mrst",
+      "domain": "petroleum_energy",
+      "source_type": "simulation",
+      "capabilities": [
+        "reservoir_simulation",
+        "multiphase_flow",
+        "geothermal"
+      ],
+      "status": "inspect",
+      "license": "GPL-3.0",
+      "privacy": [
+        "public",
+        "private"
+      ],
+      "relevance": 0.9,
+      "evidence": 0.85,
+      "reproducibility": 0.9,
+      "maintenance": 0.85,
+      "uncertainty_fit": 0.9,
+      "integration": 0.8,
+      "notes": "Research simulator; version/module lock required."
+    },
+    {
+      "id": "ip:patent_search",
+      "domain": "ip_technology_foresight",
+      "source_type": "database",
+      "capabilities": [
+        "prior_art",
+        "patent_landscape",
+        "technology_foresight"
+      ],
+      "status": "inspect",
+      "license": "service",
+      "privacy": [
+        "public",
+        "private"
+      ],
+      "relevance": 0.95,
+      "evidence": 0.9,
+      "reproducibility": 0.85,
+      "maintenance": 0.9,
+      "uncertainty_fit": 0.9,
+      "integration": 0.8,
+      "notes": "Search source only; legal conclusions require human/IP gate."
+    },
+    {
+      "id": "industrial:dra_liquid",
+      "domain": "petroleum_energy",
+      "source_type": "private_research_lane",
+      "capabilities": [
+        "drag_reduction",
+        "flow_assurance",
+        "scale_up"
+      ],
+      "status": "private",
+      "license": "proprietary",
+      "privacy": [
+        "private"
+      ],
+      "relevance": 1,
+      "evidence": 0.0,
+      "reproducibility": 0.0,
+      "maintenance": 1,
+      "uncertainty_fit": 0.5,
+      "integration": 0.5,
+      "notes": "Metadata only; no formulation/process payload."
+    },
+    {
+      "id": "industrial:dra_gas",
+      "domain": "petroleum_energy",
+      "source_type": "private_research_lane",
+      "capabilities": [
+        "gas_transmission",
+        "flow_assurance",
+        "materials_compatibility"
+      ],
+      "status": "private",
+      "license": "proprietary",
+      "privacy": [
+        "private"
+      ],
+      "relevance": 1,
+      "evidence": 0.0,
+      "reproducibility": 0.0,
+      "maintenance": 1,
+      "uncertainty_fit": 0.5,
+      "integration": 0.5,
+      "notes": "Metadata only; patent-sensitive payload excluded."
+    },
+    {
+      "id": "industrial:[redacted-process]",
+      "domain": "petroleum_energy",
+      "source_type": "private_research_lane",
+      "capabilities": [
+        "water_treatment",
+        "oxidation_process",
+        "process_control"
+      ],
+      "status": "private",
+      "license": "proprietary",
+      "privacy": [
+        "private"
+      ],
+      "relevance": 1,
+      "evidence": 0.0,
+      "reproducibility": 0.0,
+      "maintenance": 1,
+      "uncertainty_fit": 0.5,
+      "integration": 0.6,
+      "notes": "Private R&D lane; no formulation or operating parameters."
+    },
+    {
+      "id": "biomed:instrumentation",
+      "domain": "biomedical_engineering",
+      "source_type": "research_lane",
+      "capabilities": [
+        "measurement",
+        "sensing",
+        "instrument_validation"
+      ],
+      "status": "monitor",
+      "license": "mixed",
+      "privacy": [
+        "public",
+        "private"
+      ],
+      "relevance": 0.9,
+      "evidence": 0.8,
+      "reproducibility": 0.8,
+      "maintenance": 0.8,
+      "uncertainty_fit": 0.9,
+      "integration": 0.8,
+      "notes": "Requires calibration and measurement-model gate."
+    },
+    {
+      "id": "ip:patent_connectors",
+      "domain": "ip_technology_foresight",
+      "source_type": "connector",
+      "capabilities": [
+        "prior_art",
+        "patent_search",
+        "family_analysis"
+      ],
+      "status": "use",
+      "license": "service",
+      "privacy": [
+        "public",
+        "private"
+      ],
+      "relevance": 0.95,
+      "evidence": 0.9,
+      "reproducibility": 0.9,
+      "maintenance": 0.9,
+      "uncertainty_fit": 0.9,
+      "integration": 0.85,
+      "notes": "Legal conclusions require human review."
+    },
+    {
+      "id": "platform:scientific_intelligence",
+      "domain": "scientific_intelligence",
+      "source_type": "agent_platform",
+      "capabilities": [
+        "literature_synthesis",
+        "evidence_provenance",
+        "multi_agent_orchestration"
+      ],
+      "status": "use",
+      "license": "internal",
+      "privacy": [
+        "public",
+        "private"
+      ],
+      "relevance": 1,
+      "evidence": 0.9,
+      "reproducibility": 0.9,
+      "maintenance": 0.9,
+      "uncertainty_fit": 0.95,
+      "integration": 0.95,
+      "notes": "Core KNN platform capability."
+    },
+    {
+      "id": "academic:research_support",
+      "domain": "academic_research_support",
+      "source_type": "workflow",
+      "capabilities": [
+        "proposal_review",
+        "literature_review",
+        "application_support"
+      ],
+      "status": "use",
+      "license": "internal",
+      "privacy": [
+        "private"
+      ],
+      "relevance": 0.8,
+      "evidence": 0.8,
+      "reproducibility": 0.8,
+      "maintenance": 0.8,
+      "uncertainty_fit": 0.9,
+      "integration": 0.8,
+      "notes": "Private academic-support lane; no sensitive personal data in public registry."
+    },
+    {
+      "id": "finance:quant_intelligence",
+      "domain": "finance_quant",
+      "source_type": "agent_lane",
+      "capabilities": [
+        "market_analysis",
+        "point_in_time_analysis",
+        "backtesting",
+        "risk_analysis",
+        "scenario_analysis"
+      ],
+      "status": "use",
+      "license": "internal",
+      "privacy": [
+        "public",
+        "private"
+      ],
+      "relevance": 1,
+      "evidence": 0.9,
+      "reproducibility": 0.95,
+      "maintenance": 0.9,
+      "uncertainty_fit": 0.95,
+      "integration": 0.95,
+      "notes": "No autonomous trade execution."
+    }
   ]
 }

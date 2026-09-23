@@ -10,7 +10,8 @@ providers:
     capabilities: [quotes, history, market_watch, order_book]
     realtime: true
     point_in_time: true
-    url: https://api.tsetmc.com/docs/
+    url: https://webgw.tse.ir/InstrumentProvider/api/v1/
+    notes: "Preferred Iranian exchange source; official gateway surface; verify current access/geo/rate limits before scheduled use."
     notes: "Preferred Iranian exchange source; respect access/geo/rate limits."
   - id: codal
     class: official
