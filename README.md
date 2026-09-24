@@ -89,10 +89,26 @@ Source quality is assessed before adoption. Third-party agents, MCP servers, rep
 
 ## Project status
 
-**Public architecture:** v0.1.x research-agent foundation.
+**Public architecture:** v0.4.0 research-agent foundation.
 
 The project is a research workflow and orchestration framework. It does not guarantee scientific correctness, clinical efficacy, manufacturing performance, financial returns, or autonomous decision quality.
 
 ## Citation and contribution
 
 Please use the repository documentation and citation metadata when referencing this software. Contributions should preserve evidence provenance, validation contracts, security boundaries, and reproducibility requirements.
+
+
+## Executable runtime utilities
+
+The public repository includes a minimal deterministic CLI for local validation and orchestration demonstrations:
+
+- pip install -e .
+- kian-nano validate-registries registry/cross_domain_capability_registry.json
+- kian-nano plan-cycle --input examples/portfolio_cycle.json
+- kian-nano route --registry registry/cross_domain_capability_registry.json --capability variant_calling
+
+The CLI is deliberately narrow: it does not grant external credentials, perform autonomous consequential actions, or bypass project privacy/approval boundaries.
+
+## Executable examples
+
+The examples/ directory contains public-safe examples for dependency-aware portfolio planning, capability routing, and evidence-output structure. They contain no private company research data.
