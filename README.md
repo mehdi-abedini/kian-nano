@@ -2,6 +2,19 @@
 
 An evidence-grounded scientific research agent and orchestration framework for reproducible literature review, patent research, technology intelligence, biomedical research, industrial R&D, process engineering, and quantitative research.
 
+## Reviewer / technical evidence map
+
+A reviewer can evaluate the public implementation without access to confidential company infrastructure:
+
+1. **Architecture:** [docs/ARCHITECTURE.md](docs/ARCHITECTURE.md)
+2. **Verification path:** [docs/REVIEWER_GUIDE.md](docs/REVIEWER_GUIDE.md)
+3. **Executable runtime:** [Executable runtime utilities](#executable-runtime-utilities)
+4. **Automated regression:** [.github/workflows/ci.yml](.github/workflows/ci.yml)
+5. **Change history:** [CHANGELOG.md](CHANGELOG.md)
+6. **KHWARIZMI boundary:** [docs/KHWARIZMI_PUBLIC_EVIDENCE.md](docs/KHWARIZMI_PUBLIC_EVIDENCE.md)
+
+The evidence path is intentionally ordered from system design to executable behavior, automated checks, and historical traceability.
+
 ## Position within KHWARIZMI AI OS
 
 The Research Agent is a **public capability and research-infrastructure layer** within the broader Kian Nano Karno ecosystem. It is not the entire AI OS and does not replace the governed Executive Orchestrator.
