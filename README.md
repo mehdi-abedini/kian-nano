@@ -2,6 +2,136 @@
 
 An evidence-grounded scientific research agent and orchestration framework for reproducible literature review, patent research, technology intelligence, biomedical research, industrial R&D, process engineering, and quantitative research.
 
+## At a glance
+
+| Property | Status |
+|---|---|
+| **Scope** | Public scientific research, technology intelligence, and orchestration infrastructure |
+| **Primary language** | Python |
+| **Public release line** | v0.4.0 foundation |
+| **Execution model** | Capability routing → specialist workstreams → evidence → validation → synthesis |
+| **Verification** | Automated tests, deterministic CLI checks, registry validation, compile checks |
+| **Security posture** | No credentials required for public examples; tracked-file secret-like scan in CI |
+| **Confidentiality** | Private company data, unpublished R&D, credentials, and patent-sensitive implementation excluded |
+| **Decision boundary** | Human approval required for consequential or irreversible actions |
+
+## Quick start
+
+### Install
+
+```bash
+python -m pip install -e .
+```
+
+For development and regression testing:
+
+```bash
+python -m pip install -e ".[test]"
+python -m pytest -q
+```
+
+### Run the deterministic examples
+
+```bash
+kian-nano validate-registries registry/cross_domain_capability_registry.json
+kian-nano plan-cycle --input examples/portfolio_cycle.json
+kian-nano route --registry registry/cross_domain_capability_registry.json --capability variant_calling
+```
+
+These commands exercise public registry validation, portfolio planning, and capability routing without requiring external credentials or performing consequential side effects.
+
+## Core workflow
+
+The public implementation is organized around a bounded evidence workflow:
+
+```text
+Research question
+      ↓
+Problem decomposition
+      ↓
+Capability selection / routing
+      ↓
+Specialist workstreams
+      ↓
+Evidence collection
+      ↓
+Validation + uncertainty checks
+      ↓
+Reconciliation
+      ↓
+Reproducible synthesis / report
+      ↓
+Human review when required
+```
+
+The important architectural constraint is that **capability is not evidence** and **model output is not automatically a validated claim**.
+
+## Repository map
+
+| Path | Purpose |
+|---|---|
+| `agents/` | Public specialist-agent briefs and capability definitions |
+| `benchmarks/` | Benchmark-oriented public assets |
+| `design/` | Design and architecture contracts |
+| `docs/` | Architecture, reviewer guidance, and public evidence boundaries |
+| `evals/` | Evaluation-oriented artifacts |
+| `examples/` | Public-safe executable examples |
+| `registry/` | Capability and pipeline registries |
+| `references/` | Public research and methodology references |
+| `runtime/` | Runtime/orchestration support |
+| `scripts/` | Deterministic maintenance and validation utilities |
+| `tests/` | Automated regression tests |
+| `platform/` | Public platform/gateway configuration and routing artifacts |
+
+The repository also contains domain-specific contracts and validation modules at the project root.
+
+## Quality gates
+
+Changes are expected to pass the following checks before integration:
+
+1. **Syntax / compilation** — Python sources compile successfully.
+2. **Registry integrity** — public JSON registries parse and validate.
+3. **Regression suite** — automated tests pass.
+4. **Deterministic CLI behavior** — documented examples execute successfully.
+5. **Secret hygiene** — tracked files are checked for secret-like literals.
+6. **Documentation consistency** — public claims remain bounded by the evidence actually exposed by the repository.
+
+The GitHub Actions workflow is intentionally fail-closed for these checks.
+
+## Security and trust model
+
+Third-party repositories, agents, MCP servers, datasets, models, and executable tools are treated as **untrusted dependencies until reviewed** for provenance, licensing, versioning, security, reproducibility, and applicability.
+
+The public repository does not grant authority to execute external consequential actions. Credentials, private endpoints, customer data, unpublished experiments, and restricted datasets belong outside the public evidence boundary.
+
+For security disclosures, use the repository security policy rather than publishing sensitive details in an issue.
+
+## Roadmap / next evidence
+
+Near-term development is evidence-driven rather than feature-count driven:
+
+- strengthen benchmark fixtures and domain-specific regression coverage;
+- expand public-safe capability registries and applicability constraints;
+- improve provenance and evidence-ledger interoperability;
+- publish reproducible examples where external datasets and licenses permit;
+- expose additional implementation evidence from KHWARIZMI only when it can be disclosed without weakening privacy or IP boundaries;
+- add a public BionicPath companion repository after the repository owner creates the target repository.
+
+This roadmap does not imply that unimplemented capabilities are currently production-ready.
+
+## Reviewer / technical evidence map
+
+A reviewer can evaluate the public implementation without access to confidential company infrastructure:
+
+1. **Architecture:** [docs/ARCHITECTURE.md](docs/ARCHITECTURE.md)
+2. **Verification path:** [docs/REVIEWER_GUIDE.md](docs/REVIEWER_GUIDE.md)
+3. **Executable runtime:** [Executable runtime utilities](#executable-runtime-utilities)
+4. **Automated regression:** [.github/workflows/ci.yml](.github/workflows/ci.yml)
+5. **Change history:** [CHANGELOG.md](CHANGELOG.md)
+6. **KHWARIZMI boundary:** [docs/KHWARIZMI_PUBLIC_EVIDENCE.md](docs/KHWARIZMI_PUBLIC_EVIDENCE.md)
+
+The evidence path is intentionally ordered from system design to executable behavior, automated checks, and historical traceability.
+
 ## Position within KHWARIZMI AI OS
 
 The Research Agent is a **public capability and research-infrastructure layer** within the broader Kian Nano Karno ecosystem. It is not the entire AI OS and does not replace the governed Executive Orchestrator.
