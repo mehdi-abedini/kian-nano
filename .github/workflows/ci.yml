@@ -57,9 +57,9 @@ jobs:
           )"
           suspicious="$(
             printf '%s\n' "$matches" |
-              grep -v -E 'api[_-]?key[[:space:]]*:[[:space:]]*(os\.environ/|\$\{[^}]+\}|\$[A-Z_][A-Z0-9_]*)' |
-              grep -v -E 'password[[:space:]]*:[[:space:]]*(os\.environ/|\$\{[^}]+\}|\$[A-Z_][A-Z0-9_]*)' |
-              grep -v -E 'secret[[:space:]]*:[[:space:]]*(os\.environ/|\$\{[^}]+\}|\$[A-Z_][A-Z0-9_]*)' || true
+              grep -v -E 'api[_-]?key[[:space:]]*[=:][[:space:]]*(os\.environ/|\$\{[^}]+\}|\$[A-Z_][A-Z0-9_]*)' |
+              grep -v -E 'password[[:space:]]*[=:][[:space:]]*(os\.environ/|\$\{[^}]+\}|\$[A-Z_][A-Z0-9_]*)' |
+              grep -v -E 'secret[[:space:]]*[=:][[:space:]]*(os\.environ/|\$\{[^}]+\}|\$[A-Z_][A-Z0-9_]*)' || true
           )"
           if [ -n "$suspicious" ]; then
             printf '%s\n' "$suspicious"
