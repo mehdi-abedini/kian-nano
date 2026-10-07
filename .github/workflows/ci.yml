@@ -51,7 +51,18 @@ jobs:
       - name: Check tracked files for secret-like content
         shell: bash
         run: |
-          if git grep -n -I -E 'BEGIN (RSA|OPENSSH|EC|PRIVATE) KEY|api[_-]?key[[:space:]]*[:=]|password[[:space:]]*[:=]|secret[[:space:]]*[:=]' -- . ':!.github/workflows/ci.yml'; then
-            echo 'Potential secret-like content detected in tracked files.'
+          set -o pipefail
+          matches="$(
+            git grep -n -I -E 'BEGIN (RSA|OPENSSH|EC|PRIVATE) KEY|api[_-]?key[[:space:]]*[:=]|password[[:space:]]*[:=]|secret[[:space:]]*[:=]' -- . ':!.github/workflows/ci.yml' || true
+          )"
+          suspicious="$(
+            printf '%s\n' "$matches" |
+              grep -v -E 'api[_-]?key[[:space:]]*:[[:space:]]*(os\.environ/|\$\{[^}]+\}|\$[A-Z_][A-Z0-9_]*)' |
+              grep -v -E 'password[[:space:]]*:[[:space:]]*(os\.environ/|\$\{[^}]+\}|\$[A-Z_][A-Z0-9_]*)' |
+              grep -v -E 'secret[[:space:]]*:[[:space:]]*(os\.environ/|\$\{[^}]+\}|\$[A-Z_][A-Z0-9_]*)' || true
+          )"
+          if [ -n "$suspicious" ]; then
+            printf '%s\n' "$suspicious"
+            echo 'Potential literal secret-like content detected in tracked files.'
             exit 1
           fi
