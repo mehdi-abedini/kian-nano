@@ -1,0 +1,57 @@
+name: Public Research Agent CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: research-agent-ci-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  test:
+    name: Public regression
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+
+      - name: Set up Python
+        uses: actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97
+        with:
+          python-version: '3.11'
+          cache: pip
+
+      - name: Install package and test dependencies
+        run: |
+          python -m pip install --upgrade pip
+          python -m pip install -e ".[test]"
+
+      - name: Compile package
+        run: python -m compileall -q .
+
+      - name: Validate registries
+        run: python -c "import json, pathlib; [json.loads(p.read_text(encoding='utf-8-sig')) for p in pathlib.Path('.').glob('**/*.json') if '.git' not in p.parts]"
+
+      - name: Run test suite
+        run: python -m pytest -q
+
+      - name: Run deterministic CLI checks
+        run: |
+          kian-nano validate-registries registry/cross_domain_capability_registry.json
+          kian-nano plan-cycle --input examples/portfolio_cycle.json
+          kian-nano route --registry registry/cross_domain_capability_registry.json --capability variant_calling
+
+      - name: Check tracked files for secret-like content
+        shell: bash
+        run: |
+          if git grep -n -I -E 'BEGIN (RSA|OPENSSH|EC|PRIVATE) KEY|api[_-]?key[[:space:]]*[:=]|password[[:space:]]*[:=]|secret[[:space:]]*[:=]' -- . ':!.github/workflows/ci.yml'; then
+            echo 'Potential secret-like content detected in tracked files.'
+            exit 1
+          fi
