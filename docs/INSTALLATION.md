@@ -1,5 +1,25 @@
 # Installation
 
+## Python package
+
+Requirements:
+- Python 3.11 or newer.
+- A virtual environment is recommended for local development.
+
+Install the package and its test dependencies from the repository root:
+
+```powershell
+python -m pip install -e ".[test]"
+```
+
+Run the complete validation suite:
+
+```powershell
+python -m pytest
+```
+
+The package declares runtime dependencies in `[project.dependencies]` and development/test dependencies in `[project.optional-dependencies]` in `pyproject.toml`. Do not install undeclared scientific libraries into the project environment unless the source code requires them and the dependency is added to project metadata.
+
 ## Codex
 Place the directory under a supported skills path such as:
 C:\\Users\\X\\.agents\\skills\\kian-nano-karno-research-agent
